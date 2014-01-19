@@ -1,0 +1,256 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Developer portfolio</title>
+	<meta name="author" content="Matteo Cancellieri"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar"/>  
+	<link rel="stylesheet" type="text/css" href="res/styles.css"/>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">   
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+  <script src="res/main.js" type="text/javascript" charset="utf-8"></script>
+ <!--[if lt IE 9]>  
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>  
+    <![endif]-->  
+</head>
+<body>
+	<div id="w" itemscope itemtype="http://schema.org/Person">
+		<header class="clearfix">
+			<div id="info">
+				<h1><span itemprop="name"> Matteo Cancellieri </span></h1>
+				<h3><span itemprop="">Software engineer</span></h3>
+				<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">  
+					<span itemprop="addressLocality">Rignano Flaminio</span>,   
+					<span itemprop="addressRegion">Rome</span>,   
+					<span itemprop="addressCountry">Italy</span>  
+				</small>  
+				<small><span itemprop="email"><a href="mailto:matteo.cancellieri@gmail.com">matteo.cancellieri@gmail.com</a></span></small>  
+        <div class="social-icons">
+          <h3>Contact me!</h3>
+				<a href="https://github.com/mcancellieri">
+          <i class="fa fa-github-square fa-3x"></i>
+        </a>
+				<a href="http://www.linkedin.com/in/matteocancellieri">
+          <i class="fa fa-linkedin-square fa-3x"></i>
+        </a>
+				<a href="https://twitter.com/CancM">
+          <i class="fa fa-twitter-square fa-3x"></i>
+        </a>
+				<a href="http://ctrlaltcancel.tumblr.com/">
+          <i class="fa fa-tumblr-square fa-3x"></i>
+        </a>
+				<a href="https://www.facebook.com/matteo.cancellieri">
+          <i class="fa fa-facebook-square fa-3x"></i>
+        </a>
+        </div>
+			</div>
+			<div id="photo">
+				<img src="res/img/foto250.png" itemprop="image" alt="Matteo Cancellieri resume photo"/>
+			</div>
+		</header>
+		<section id="profile">
+			<h2>Bio</h2>
+			<p itemprop="description">
+ 				<p>
+          I am working in mobile world since 2008. I create backend solutions for mobile banking applications, we have worked with lot of major italian and european banking companies and some other major european firms.
+         </p>
+ 				<p> 
+          I have experience developing application in all the major mobile platform from midlets to more recently iOS, Android and also Windows Phone and Windows 8.
+        </p>
+ 				<p> 
+         I love to be involved in making software production as easy as possible. I am continuosly trying to simplify the company software developing process, using well known mechanisms (ex. Continuous Integration) as well as scripts and tools to make the life a software developer easier.
+        </p>
+ 				<p>
+          I am a passionate web designer and developer  I have created and managed some web application and sites as side projects. I also love to play a bit with vector graphics. That's one of these project :)
+        </p>	
+		</section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <p id="skills_desc">This is a useless but cool HTML5+JQuery bubble graph, bigger balls means bigger experience in that skill. Position and color have no meaning.</p>
+      <span onclick="getSkillAndDraw()">
+          <i class="fa fa-refresh fa-2x"></i>
+      </span>
+      <canvas id="bubbles" width="800px" height="500px" >
+      </canvas>
+      
+      
+    </section>
+		<section id = "portfolio" class="clearfix" itemscope itemtype="http://schema.org/ItemList">  
+			<h2>Projects I worked for</h2>
+				<section class="clearfix folio">
+					<div>
+						<div class="folio_image">
+								<img src="res/img/hellobank.png" alt="Hello bank"  />
+						</div>
+						<div class="folio_desc">
+							<h3> Hello Bank by BNL-BNP Paribas</h3>
+							<p>
+								I managed the developing team for large time in the app development process, facing directly with customer, working on issues, defect and requirements until the production release. I work on creating the backend side of our mobile applications (Android and iOS). 
+							</p>
+            </div>
+				</section>
+					<section class="clearfix folio">
+					<div>
+						<div class="folio_image">
+								<img src="res/img/unicreditipad.jpeg" alt="Unicredit Ipad"  />
+						</div>
+						<div class="folio_desc">
+							<h3>Unicredit Ipad app</h3>
+							<p>
+                We set a new standard in mobile banking for tablets, I work on creating the backend side and on defect management facing directly our customers.
+							</p></div>
+						</div>
+          </section>
+            <section class="clearfix folio">
+					<div>
+						<div class="folio_image">
+								
+						</div>
+						<div class="folio_desc">
+							<h3>Unicredit Push Notification Manager</h3>
+							<p>
+                Creation of a set of SOAP webservices to allow push notification creation sending and management, interaction with push notification providers and banking DBs.
+							</p>
+            </div>
+					</section>
+					<section class="clearfix folio">
+					<div>
+						<div class="folio_image">
+								<img src="res/img/ingiphone.jpeg" alt="ING logo"  />
+						</div>
+						<div class="folio_desc">
+							<h3>ING Direct Italia Mobile Application</h3>
+							<p>
+                I worked on the server side team for the creation of backend services for our Android and Iphone mobile applications. We work on the creation of a framework that let you control app pages and design directly from server side. 	
+							</p></div>
+						</div>
+					</section>
+					<section class="clearfix folio">
+					<div>
+						<div class="folio_image">
+								<img src="res/img/wbw8-1.jpg" alt="Webank windows8 screen1"  />
+						</div>
+						<div class="folio_desc">
+							<h3>Webank Windows8</h3>
+							<p>
+								In this project we used our previous experience in PagineGialle creating highly customizable user controls. As a Windows 8 developer I worked on the creation custom user controls allowing us to have a more fine grained control on what we want to show on application.
+							</p></div>
+						</div>
+					</section>
+						<section class="clearfix folio">
+						<div>
+							<div class="folio_image">
+									<img src="res/img/wb-1.jpg" alt="Webank Iphone screen1"  />
+							</div>
+							<div class="folio_desc">
+								<h3>Webank Iphone</h3>
+								<p>
+									As an iOS developer I work in the creation of a component-based framework to enable mobile banking and trading features.
+								</p>
+							</div>
+						</section>
+            <section class="clearfix folio">
+					<div>
+						<div class="folio_image">
+								<img src="res/img/uniiphone-1.jpg" alt="Unicredit Iphone screen1"  />
+						</div>
+						<div class="folio_desc">
+							<h3>Unicredit Iphone demo</h3>
+							<p>
+                As an iOS developer I work in creating a demo disabling all the interactions and securities unwanted for the demo on our mobile banking application.
+              </p>
+						</div>
+					</section>
+					<section class="clearfix folio">
+						<div>
+							<div class="folio_image">
+									<img src="res/img/PG-1.jpg" alt="Pagine Gialle screen1"  />
+							</div>
+							<div class="folio_desc">
+								<h3>Pagine Gialle/Bianche Windows 8 and Windows Phone</h3>
+								<p>
+									As a Windows 8 developer we create one of the very first app on the italian Windows 8 market. I also worked for the already in production Windows Phone apps.
+								</p>
+              </div>
+						</section>
+				</section>
+      </section>
+          <section id="personal">
+            <h2>Personal projects</h2>
+  					<section class="clearfix folio">
+  						<div>
+  							<div class="folio_image">
+  									<img src="res/img/teatronelbicchiere.png" alt="Teatro nel bicchiere"  />
+  							</div>
+  							<div class="folio_desc">
+  								<h3>Teatro nel bicchiere</h3>
+  								<p>
+  									A website for a theatre and performance festival hosted in Tuscany on summer.  Developed with Jquery, Html5 and CSS3. 
+                    <a href="www.teatronelbicchiere.it">www.teatronelbicchiere.it</a>
+  								</p>
+                </div>
+  						</section>
+      					<section class="clearfix folio">
+      						<div>
+      							<div class="folio_image">
+      									<img src="res/img/ssak.png" alt="SSAK"  />
+      							</div>
+      							<div class="folio_desc">
+      								<h3>Server swiss army knife</h3>
+      								<p>
+      									A plugin based tool to help developer in everyday work, avalaible either in PyQt or in NodeJS+REST+Jquery website.
+                        <a href="http://git.io/YomJpA">GitHub Link</a>
+      								</p>
+                    </div>
+      						</section>
+        					<section class="clearfix folio">
+        						<div>
+        							<div class="folio_image">
+        									<img src="res/img/mandingofrog.png" alt="Mandingo frog"  />
+        							</div>
+        							<div class="folio_desc">
+        								<h3>Mandingo frog</h3>
+        								<p>
+        									Our motto is "super cool apps in 5 minutes/man", we create funny and careless Android apps.
+                          <a href="http://goo.gl/YZCji0">GitHub Link</a>
+        								</p>
+                      </div>
+        						</section>
+          </section>
+          <section id="academic">
+            <h2>Academic works</h2>
+  					<section id="aca">
+  						<section class="clearfix">
+  						<div>
+  							
+  							</div>
+  							<div class="folio">
+  								<h3>Publications</h3>
+
+  									<p>
+  									<b>Transport-layer issues in Information Centric Networks</b>
+  	ACM SIGCOMM Workshop on Information-Centric Networking (ICN-2012). Publication in progress. <i>S. Salsano, A. Detti, M. Cancellieri, M. Pomposini, N. Blefari-Melazzi</i>
+  									</p>
+  									<p>
+  									<b>An Information Centric Networking experiment fon the OFELIA OpenFlow testbed.</b>
+  	ACM SIGCOMM Workshop on Software Defined Networking.<i>A. Araldo, N. Blefari-Melazzi, A. Detti, M.Cancellieri,L. Linguaglossa, G. Morabito, S. Salsano, L. Veltri</i>
+  									</p>
+  									<p>
+  									<b>Receiver driven trasport protocol for CONET ICN</b>
+  	IETF Internet draft. November 2011<i>S. Salsano, M. Cancellieri, A. Detti</i>
+  									</p>
+
+  								</div>
+  							</div>
+  						</section>
+  					</section>
+          </section>
+				</div>
+			</section>
+		</div>
+	</body>
+	</html>

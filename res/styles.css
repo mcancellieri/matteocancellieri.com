@@ -1,0 +1,351 @@
+        * { margin: 0; padding: 0; }  
+        html { height: 101%; }  
+        body { background: #f2f2f2 url('img/bg-tile.png'); font-size: 62.5%; padding-bottom: 65px; }  
+        
+        h1 { font-family: "Helvetica", "Trebuchet MS", Arial, sans-serif; color: #454545; font-size: 3.6em; margin-bottom: 6px; }  
+        h2 { font-family: "Helvetica", "Trebuchet MS", Arial, sans-serif; color: #484848; font-size: 2.5em; margin-bottom: 10px;  }  
+        h3 { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; color: #777; font-weight: normal; font-size: 1.8em; margin-bottom: 10px; }  
+        h4 { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; color: #656565; font-weight: bold; font-size: 1.75em; margin-bottom: 4px; }  
+        
+        p { font-family: "Balthazar", "Droid Serif", Times New Roman, serif; color: #565656; font-size: 1.8em; line-height: 1.4em; margin-bottom: 15px; padding-left: 35px; }  
+        small { font-family: "Balthazar", serif; color: #656565; font-size: 1.6em; display: block; margin-bottom: 6px; }  
+        ul { display: block; list-style: none; }  
+        ul li { padding-left: 45px; list-style-type: none; vertical-align: top; background: url('http://media02.hongkiat.com/responsive-resume/bullet.png') 25px 5px no-repeat; margin-bottom: 5px; font-family: "Balthazar", serif; color: #666; font-size: 1.6em; line-height: 2.3em; }  
+        
+        img { border: 0; max-width: 100%; }  
+        
+        a { color: #5582d6; text-decoration: none; }  
+        a:hover { text-decoration: underline; }  
+
+        /** @group core layout **/  
+        #w { margin: 10px 50px; padding: 20px 40px; padding-top: 35px; background: #fff; min-width: 260px; max-width: 900px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-rightright-radius: 8px; -moz-border-radius-bottomleft: 8px; -moz-border-radius-bottomright: 8px; 
+        box-shadow: 3px 3px 3px #888888;
+        border-top-right-radius: 8px; border-top-left-radius: 8px;
+        }  
+        #bubbles  {
+          width:800px;
+          height:500px;
+        }
+        
+        header { width: 100%; }  
+
+        .clearfix:after {
+          clear: both;
+          content: ".";
+          display: block;
+          height: 0;
+          line-height: 0;
+          visibility: hidden;
+        }
+        .clearfix {
+          display: inline-block;
+        }
+        html[xmlns] .clearfix {
+          display: block;
+        }
+        * html .clearfix {
+          height: 1%;
+        }
+        
+        /** @group personal settings **/  
+        #info { 
+          float: left; 
+          
+        
+        } 
+        #info a{
+          color:#484848;
+        }
+        #info a:hover{
+          color:#777;
+        } 
+        #info a:visited{
+          color:#484848;
+        } 
+        #photo { float: right; }  
+        #photo img {   
+          -webkit-border-radius: 3px;  
+          -moz-border-radius: 3px;  
+          border-radius: 3px;  
+          -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+          -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+          background-color: #fff;  
+          border: 1px solid #ccc;  
+          padding: 5px;
+        }  
+        
+        #skills_desc{
+          font-size:1em;
+          margin-top:30px;
+        }
+
+
+  /**
+  accordion css
+  **/
+
+  /*Define Accordion box*/  
+  .accordion {   
+   width:830px;  
+   overflow:hidden;   
+   margin:10px auto;   
+   color:#474747;   
+   background:#ffffff;   
+   padding:0px, 10px;   
+ }  
+
+ .accordion section{   
+  float:left;  
+  overflow:hidden;  
+  cursor:pointer;   
+  background: #fff;   
+  margin:3px;   
+}  
+/*.accordion section:hover {  
+  background:#efefef;  
+} */
+
+.accordion a:hover{
+	/*background:#efefef;*/
+	background:#dadaf2;
+} 
+
+.accordion section section {
+  font-family: "Balthazar", "Droid Serif", Times New Roman, serif; color: #565656; 
+  font-size: 1.8em; 
+  line-height: 1.4em; 
+  margin-bottom: 15px; 
+  display:none; 
+  height: 100%;
+  width:100%;  
+}  
+
+.accordion section:after{  
+  position:relative;  
+  font-size:24px;  
+  color:#000;  
+  font-weight:bold;  
+}  
+     /** .accordion section:nth-child(1):after{ content:'1'; }  
+      .accordion section:nth-child(2):after{ content:'2'; }  
+      .accordion section:nth-child(3):after{ content:'3'; }  
+      .accordion section:nth-child(4):after{ content:'4'; }  
+      .accordion section:nth-child(5):after{ content:'5'; }  **/
+
+      .accordion section:target {   
+        background:#fff;   
+        padding:0px;  
+      }  
+      .accordion section:target:hover {   
+        background:#fff;   
+      }  
+      .accordion section:target h2 {  
+        width:100%;  
+      }  
+      .accordion section:target h2 a{   
+        color:#666666;   
+        padding:0;  
+      }  
+      .accordion section:target section {  
+        display:block;  
+      }  
+      .accordion section h2 a{  
+        padding:0;  
+        display:block;   
+        font-family: "Helvetica", "Droid Serif", Times New Roman, serif; 
+        color: #777777; 
+        line-height: 1.4em; 
+        margin-bottom: 10px; 
+        margin-top: 10px;
+        text-decoration:none; 
+        font-size:0.8em;
+      }  
+
+      .vertical section{   
+       width:100%;   
+       height:40px;   
+       -webkit-transition:height 0.2s ease-out;  
+       -moz-transition:height 0.2s ease-out;  
+       -o-transition:height 0.2s ease-out;  
+       transition:height 0.2s ease-out;  
+     }  
+
+     /*Set height of the slide*/  
+     .vertical :target{   
+       height:100%;   
+       width:97%;  
+     }  
+
+     .vertical section h2 {   
+       position:relative;   
+       left:0;   
+       top:-15px;   
+     }  
+     /*Set position of the number on the slide*/  
+     .vertical section:after{   
+      top:-60px;  
+      left:810px;  
+    }  
+    .vertical section:target:after{   
+      left:-9999px;  
+    }  
+    
+    .folio {
+      margin-bottom:20px;
+    }
+
+    .folio_image {
+      float:left;
+      -webkit-border-radius: 3px;  
+      -moz-border-radius: 3px;  
+      border-radius: 3px;  
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+      -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  
+      background-color: #fff;  
+      border: 1px solid #ccc;  
+      padding: 5px;
+      width:250px;
+      height:150px;
+      overflow:hidden;
+      margin-right:20px;
+    }
+    
+    .folio_image img{
+      max-width:none;
+    }
+     .no_image {
+      float:left;
+      -webkit-border-radius: none;  
+      -moz-border-radius: none;  
+      border-radius: none;  
+      -webkit-box-shadow: none;  
+      -moz-box-shadow: none;  
+      box-shadow: none;  
+      background-color: none;  
+      border: none;  
+      padding: 5px;
+      width:40%;
+    }
+    
+    .imagestrip {
+      position: absolute; 
+      width: 500%; 
+      margin: 0;
+      top: 0; left: 0;
+      max-width:100%; 
+      max-height:100%;
+      /*animation: 1s slidy ease-in-out infinite;*/
+    }
+
+
+    @keyframes slidy { 
+      20% { left: 0%; }
+      25% { left: -100%; }
+      45% { left: -100%; }
+      50% { left: -200%; }
+      70% { left: -200%; } 
+      75% { left: -300%; }
+      95% { left: -300%; }
+      100% { left: -400%; } 
+    }
+    .folio_desc {
+      float:left;
+      max-width:50%;
+      padding-top:10px;
+    }
+    .folio_desc h2{
+     font-family: "Helvetica", "Trebuchet MS", Arial, sans-serif; 			color: #484848; 
+     font-size: 1em; 
+     margin-top: 20px;
+     margin-bottom:0px;
+   }
+   .folio_desc p{
+    font-family: "Balthazar", "Droid Serif", Times New Roman, serif; 
+    color: #565656; 
+    margin-bottom: 15px; 
+    padding-left: 0px; 
+  }
+
+        @media only screen and (max-width: 740px) {  
+          h1 { font-size: 4.5em; }  
+          h3 { font-size: 2.2em; }  
+          h2 { display: block; text-align: center; }  
+          #info { float: none; display: block; text-align: center; }  
+          #photo {  
+            float: none;  
+            display: block;  
+            text-align: center;  
+          }  
+          #w { padding: 20px 15px; }  
+          #bubbles  {
+            width:700px;
+            height:300px;
+          }
+          p { padding: 0; }
+          .folio_image {
+          	float: none; display: block;
+          	max-width:100%
+          }
+          .folio_desc {
+          	float: none; display: block;
+          	max-width:100%
+          }
+          #portfolio h2{
+          	text-align: left;
+          }
+          
+          #portfolio {
+          	width:100%;
+          	max-width: 900px;
+    		min-width: 260px;
+          } 
+          .accordion {
+          	width:100%;
+          	max-width: 900px;
+    		min-width: 260px;
+          }  
+        }  
+
+        @media only screen and (max-width: 570px) {  
+          ul li {  
+            display: inline-block;   
+            padding-left: 15px;   
+            width: 140px;   
+            background-position: -5px 0px;  
+            margin-right: 6px;   
+            line-height: 1.7em;  
+          }  
+          #bubbles  {
+            width:500px;
+            height:100px;
+          }
+          #skills-left, skills-rightright { margin-bottom: 15px; }  
+        }  
+
+        @media only screen and (max-width: 480px) {  
+          ul li { width: 120px; }  
+          #w { margin: 5px 20px; }  
+          #bubbles  {
+            width:400px;
+            height:100px;
+          }
+        }  
+        
+        @media only screen and (max-width: 320px) {  
+          #w { margin: 5px 10px; }  
+          #bubbles  {
+            width:400px;
+            height:100px;
+          }
+        }  
+        
+        /** iPhone only **/  
+        @media screen and (max-device-width: 480px) {  
+          ul li { width: 150px; }  
+          #bubbles  {
+            width:400px;
+            height:100px;
+          }
+        }  
