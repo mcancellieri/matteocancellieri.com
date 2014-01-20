@@ -1,4 +1,22 @@
   $( document ).ready( function(){
+  
+  	var c = $('#bubbles');
+    var ct = c.get(0).getContext('2d');
+    var container = $(c).parent();
+
+    //Run function when browser resizes
+    $(window).resize( respondCanvas );
+
+    function respondCanvas(){ 
+        c.attr('width', $("#w").width() ); //max width
+        c.attr('height', $(container).height()-100 ); //max height
+
+        //Call a function to redraw other content (texts, images etc)
+    }
+
+    //Initial call 
+    respondCanvas();
+  
       getSkillAndDraw();
     });
     

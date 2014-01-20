@@ -22,10 +22,7 @@
         box-shadow: 3px 3px 3px #888888;
         border-top-right-radius: 8px; border-top-left-radius: 8px;
         }  
-        #bubbles  {
-          width:800px;
-          height:500px;
-        }
+        
         
         header { width: 100%; }  
 
@@ -53,6 +50,11 @@
           
         
         } 
+        
+        #skills {
+        	max-height:600px;
+        	display:inline-block;
+        }
         #info a{
           color:#484848;
         }
@@ -279,10 +281,7 @@
             text-align: center;  
           }  
           #w { padding: 20px 15px; }  
-          #bubbles  {
-            width:700px;
-            height:300px;
-          }
+          
           p { padding: 0; }
           .folio_image {
           	float: none; display: block;
@@ -305,7 +304,11 @@
           	width:100%;
           	max-width: 900px;
     		min-width: 260px;
-          }  
+          } 
+          
+           #skills {
+        	max-height:400px;
+        	} 
         }  
 
         @media only screen and (max-width: 570px) {  
@@ -317,35 +320,27 @@
             margin-right: 6px;   
             line-height: 1.7em;  
           }  
-          #bubbles  {
-            width:500px;
-            height:100px;
-          }
+          
           #skills-left, skills-rightright { margin-bottom: 15px; }  
         }  
 
         @media only screen and (max-width: 480px) {  
           ul li { width: 120px; }  
           #w { margin: 5px 20px; }  
-          #bubbles  {
-            width:400px;
-            height:100px;
-          }
+          
         }  
         
         @media only screen and (max-width: 320px) {  
           #w { margin: 5px 10px; }  
-          #bubbles  {
-            width:400px;
-            height:100px;
-          }
+          #skills {
+        	max-height:300px;
+        	} 
+         
         }  
         
         /** iPhone only **/  
         @media screen and (max-device-width: 480px) {  
-          ul li { width: 150px; }  
-          #bubbles  {
-            width:400px;
-            height:100px;
-          }
+          ul li { width: 150px; }
+            
+          
         }  
