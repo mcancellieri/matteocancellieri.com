@@ -1,256 +1,355 @@
-<!DOCTYPE html >
-<html lang="en">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Developer portfolio</title>
-	<meta name="author" content="Matteo Cancellieri"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-	<meta name="HandheldFriendly" content="true"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar"/>  
-	<link rel="stylesheet" type="text/css" href="res/styles.css"/>
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">   
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-  <script src="res/main.js" type="text/javascript" charset="utf-8"></script>
- <!--[if lt IE 9]>  
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>  
-    <![endif]-->  
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Matteo Cancellieri Dev portfolio</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/ekko-lightbox.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
-	<div id="w" itemscope itemtype="http://schema.org/Person">
-		<header class="clearfix">
-			<div id="info">
-				<h1><span itemprop="name"> Matteo Cancellieri </span></h1>
-				<h3><span itemprop="">Software engineer</span></h3>
-				<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">  
-					<span itemprop="addressLocality">Rignano Flaminio</span>,   
-					<span itemprop="addressRegion">Rome</span>,   
-					<span itemprop="addressCountry">Italy</span>  
-				</small>  
-				<small><span itemprop="email"><a href="mailto:matteo.cancellieri@gmail.com">matteo.cancellieri@gmail.com</a></span></small>  
-        <div class="social-icons">
-          <h3>Contact me!</h3>
-				<a href="https://github.com/mcancellieri">
-          <i class="fa fa-github-square fa-3x"></i>
-        </a>
-				<a href="http://www.linkedin.com/in/matteocancellieri">
-          <i class="fa fa-linkedin-square fa-3x"></i>
-        </a>
-				<a href="https://twitter.com/CancM">
-          <i class="fa fa-twitter-square fa-3x"></i>
-        </a>
-				<a href="http://ctrlaltcancel.tumblr.com/">
-          <i class="fa fa-tumblr-square fa-3x"></i>
-        </a>
-				<a href="https://www.facebook.com/matteo.cancellieri">
-          <i class="fa fa-facebook-square fa-3x"></i>
-        </a>
-        </div>
-			</div>
-			<div id="photo">
-				<img src="res/img/foto250.png" itemprop="image" alt="Matteo Cancellieri resume photo"/>
-			</div>
-		</header>
-		<section id="profile">
-			<h2>Bio</h2>
-			<p itemprop="description">
- 				<p>
-          I am working in mobile world since 2008. I create backend solutions for mobile banking applications, we have worked with lot of major italian and european banking companies and some other major european firms.
-         </p>
- 				<p> 
-          I have experience developing application in all the major mobile platform from midlets to more recently iOS, Android and also Windows Phone and Windows 8.
-        </p>
- 				<p> 
-         I love to be involved in making software production as easy as possible. I am continuosly trying to simplify the company software developing process, using well known mechanisms (ex. Continuous Integration) as well as scripts and tools to make the life a software developer easier.
-        </p>
- 				<p>
-          I am a passionate web designer and developer  I have created and managed some web application and sites as side projects. I also love to play a bit with vector graphics. That's one of these project :)
-        </p>	
-		</section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <p id="skills_desc">This is a useless but cool HTML5+JQuery bubble graph, bigger balls means bigger experience in that skill. Position and color have no meaning.</p>
-      <span onclick="getSkillAndDraw()">
-          <i class="fa fa-refresh fa-2x"></i>
-      </span>
-      <canvas id="bubbles" width="800px" height="500px" >
-      </canvas>
-      
-      
-    </section>
-		<section id = "portfolio" class="clearfix" itemscope itemtype="http://schema.org/ItemList">  
-			<h2>Projects I worked for</h2>
-				<section class="clearfix folio">
-					<div>
-						<div class="folio_image">
-								<img src="res/img/hellobank.png" alt="Hello bank"  />
-						</div>
-						<div class="folio_desc">
-							<h3> Hello Bank by BNL-BNP Paribas</h3>
-							<p>
-								I managed the developing team for large time in the app development process, facing directly with customer, working on issues, defect and requirements until the production release. I work on creating the backend side of our mobile applications (Android and iOS). 
-							</p>
-            </div>
-				</section>
-					<section class="clearfix folio">
-					<div>
-						<div class="folio_image">
-								<img src="res/img/unicreditipad.jpeg" alt="Unicredit Ipad"  />
-						</div>
-						<div class="folio_desc">
-							<h3>Unicredit Ipad app</h3>
-							<p>
-                We set a new standard in mobile banking for tablets, I work on creating the backend side and on defect management facing directly our customers.
-							</p></div>
-						</div>
-          </section>
-            <section class="clearfix folio">
-					<div>
-						<div class="folio_image">
-								
-						</div>
-						<div class="folio_desc">
-							<h3>Unicredit Push Notification Manager</h3>
-							<p>
-                Creation of a set of SOAP webservices to allow push notification creation sending and management, interaction with push notification providers and banking DBs.
-							</p>
-            </div>
-					</section>
-					<section class="clearfix folio">
-					<div>
-						<div class="folio_image">
-								<img src="res/img/ingiphone.jpeg" alt="ING logo"  />
-						</div>
-						<div class="folio_desc">
-							<h3>ING Direct Italia Mobile Application</h3>
-							<p>
-                I worked on the server side team for the creation of backend services for our Android and Iphone mobile applications. We work on the creation of a framework that let you control app pages and design directly from server side. 	
-							</p></div>
-						</div>
-					</section>
-					<section class="clearfix folio">
-					<div>
-						<div class="folio_image">
-								<img src="res/img/wbw8-1.jpg" alt="Webank windows8 screen1"  />
-						</div>
-						<div class="folio_desc">
-							<h3>Webank Windows8</h3>
-							<p>
-								In this project we used our previous experience in PagineGialle creating highly customizable user controls. As a Windows 8 developer I worked on the creation custom user controls allowing us to have a more fine grained control on what we want to show on application.
-							</p></div>
-						</div>
-					</section>
-						<section class="clearfix folio">
-						<div>
-							<div class="folio_image">
-									<img src="res/img/wb-1.jpg" alt="Webank Iphone screen1"  />
-							</div>
-							<div class="folio_desc">
-								<h3>Webank Iphone</h3>
-								<p>
-									As an iOS developer I work in the creation of a component-based framework to enable mobile banking and trading features.
-								</p>
-							</div>
-						</section>
-            <section class="clearfix folio">
-					<div>
-						<div class="folio_image">
-								<img src="res/img/uniiphone-1.jpg" alt="Unicredit Iphone screen1"  />
-						</div>
-						<div class="folio_desc">
-							<h3>Unicredit Iphone demo</h3>
-							<p>
-                As an iOS developer I work in creating a demo disabling all the interactions and securities unwanted for the demo on our mobile banking application.
-              </p>
-						</div>
-					</section>
-					<section class="clearfix folio">
-						<div>
-							<div class="folio_image">
-									<img src="res/img/PG-1.jpg" alt="Pagine Gialle screen1"  />
-							</div>
-							<div class="folio_desc">
-								<h3>Pagine Gialle/Bianche Windows 8 and Windows Phone</h3>
-								<p>
-									As a Windows 8 developer we create one of the very first app on the italian Windows 8 market. I also worked for the already in production Windows Phone apps.
-								</p>
-              </div>
-						</section>
-				</section>
-      </section>
-          <section id="personal">
-            <h2>Personal projects</h2>
-  					<section class="clearfix folio">
-  						<div>
-  							<div class="folio_image">
-  									<img src="res/img/teatronelbicchiere.png" alt="Teatro nel bicchiere"  />
-  							</div>
-  							<div class="folio_desc">
-  								<h3>Teatro nel bicchiere</h3>
-  								<p>
-  									A website for a theatre and performance festival hosted in Tuscany on summer.  Developed with Jquery, Html5 and CSS3. 
-                    <a href="www.teatronelbicchiere.it">www.teatronelbicchiere.it</a>
-  								</p>
-                </div>
-  						</section>
-      					<section class="clearfix folio">
-      						<div>
-      							<div class="folio_image">
-      									<img src="res/img/ssak.png" alt="SSAK"  />
-      							</div>
-      							<div class="folio_desc">
-      								<h3>Server swiss army knife</h3>
-      								<p>
-      									A plugin based tool to help developer in everyday work, avalaible either in PyQt or in NodeJS+REST+Jquery website.
-                        <a href="http://git.io/YomJpA">GitHub Link</a>
-      								</p>
-                    </div>
-      						</section>
-        					<section class="clearfix folio">
-        						<div>
-        							<div class="folio_image">
-        									<img src="res/img/mandingofrog.png" alt="Mandingo frog"  />
-        							</div>
-        							<div class="folio_desc">
-        								<h3>Mandingo frog</h3>
-        								<p>
-        									Our motto is "super cool apps in 5 minutes/man", we create funny and careless Android apps.
-                          <a href="http://goo.gl/YZCji0">GitHub Link</a>
-        								</p>
-                      </div>
-        						</section>
-          </section>
-          <section id="academic">
-            <h2>Academic works</h2>
-  					<section id="aca">
-  						<section class="clearfix">
-  						<div>
-  							
-  							</div>
-  							<div class="folio">
-  								<h3>Publications</h3>
+	<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-  									<p>
-  									<b>Transport-layer issues in Information Centric Networks</b>
-  	ACM SIGCOMM Workshop on Information-Centric Networking (ICN-2012). Publication in progress. <i>S. Salsano, A. Detti, M. Cancellieri, M. Pomposini, N. Blefari-Melazzi</i>
-  									</p>
-  									<p>
-  									<b>An Information Centric Networking experiment fon the OFELIA OpenFlow testbed.</b>
-  	ACM SIGCOMM Workshop on Software Defined Networking.<i>A. Araldo, N. Blefari-Melazzi, A. Detti, M.Cancellieri,L. Linguaglossa, G. Morabito, S. Salsano, L. Veltri</i>
-  									</p>
-  									<p>
-  									<b>Receiver driven trasport protocol for CONET ICN</b>
-  	IETF Internet draft. November 2011<i>S. Salsano, M. Cancellieri, A. Detti</i>
-  									</p>
-
-  								</div>
-  							</div>
-  						</section>
-  					</section>
-          </section>
+		<div class='header color-line'>
+			<div class="col-md-10 col-sm-10 col-xs-10">
+				<h1>Hello! that's Matteo Cancellieri dev portfolio.</h1>
+				<div class="bio">I'm coding since 2008, I have experience in pretty much all the technologies of the stack from mobile application to websites to server side technologies. I love designing and deploying good code and I am strongly passionate in working, and encourage other people, to work with all the tools and techniques that makes the lifes of a developer as easier as possible.
 				</div>
-			</section>
+				<div class="social-icons">
+					<h3>Contact me!</h3>
+					<a href="mailto:matteo.cancellieri@gmail.com">
+						<i class="fa fa-envelope-square fa-3x"></i>
+					</a>
+					<a href="https://github.com/mcancellieri">
+						<i class="fa fa-github-square fa-3x"></i>
+					</a>
+					<a href="http://www.linkedin.com/in/matteocancellieri">
+						<i class="fa fa-linkedin-square fa-3x"></i>
+					</a>
+					<a href="https://twitter.com/CancM">
+						<i class="fa fa-twitter-square fa-3x"></i>
+					</a>
+					<a href="http://ctrlaltcancel.tumblr.com/">
+						<i class="fa fa-tumblr-square fa-3x"></i>
+					</a>
+					<a href="https://www.facebook.com/matteo.cancellieri">
+						<i class="fa fa-facebook-square fa-3x"></i>
+					</a>
+				</div>
+				
+			</div>
+			<div class="profile-frame col-md-2 col-sm-2 col-xs-2">
+				<div class="profile-picture ">
+				</div>
+			</div>
+			<div class="menu col-md-12">
+				<div class="col-md-2 col-sm-2 col-xs-0">
+					
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-3 menu-button">
+					<a href="#skills">
+						<div class="menu-icon">
+							<img src="img/skills.png" alt="Skills">
+						</div>
+						<div class="menu-title">
+							<h4>Skills</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-3 menu-button">
+					<a href="#projects">
+						<div class="menu-icon">
+							<img src="img/projects.png" alt="Projects">
+						</div>
+						<div class="menu-title">
+							<h4>Projects</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-3 menu-button">
+					<a href="#personal-projects">
+						<div class="menu-icon">
+							<img src="img/personal.png"  alt="Personal">
+						</div>
+						<div class="menu-title">
+							<h4>Personal projects</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-3 menu-button">
+					<a href="#wasted-creativity">
+						<div class="menu-icon">
+							<img src="img/creativity.png"  alt="Creativity">
+						</div>
+						<div class="menu-title">
+							<h4>Wasted Creativity</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-0">
+					
+				</div>
+			</div>
 		</div>
-	</body>
-	</html>
+			
+		<div id="skills" class="skills color-line col-md-12">
+			<h2>My Skills</h2>
+			<small>This good looking but not so meaningful bubble graph made with D3js shows skills and my proficiency with them.</small>
+		</div>
+		<div id="projects" class="projects color-line col-md-12">			
+			<h2>These are the projects I worked for </h2>		
+			<div class="col-md-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/foster.png" alt="Foster">
+				</div>
+				<div class="project-overlay">
+					<h3>FOSTER portal</h3>
+					<p>
+						A platform for open access resources, made with Drupal and Bootstrap it's helping people divulgating the Open Access priciples across the Europe.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/core.png" alt="Core">
+				</div>
+				<div class="project-overlay">
+					<h3>CORE</h3>
+					<p>
+						An aggregator of Open Access resources around the world with more than 20 million resources indexed. I worked in developing the new frontend with Symfony and I am helping mantaining and innovating the infrastracture.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/unicreditipad.jpeg" alt="Unicredit Ipad"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Unicredit Ipad app</h3>
+					<p>
+						We set a new standard in mobile banking for tablets, I work on creating the backend side and on defect management facing directly our customers.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/pnm.jpg" alt="Pnm">
+				</div>
+				<div class="project-overlay">
+					<h3>Unicredit Push Notification Manager</h3>
+					<p>
+						Creation of a set of SOAP webservices to allow push notification creation sending and management, interaction with push notification providers and banking DBs.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/ingiphone.jpeg" alt="ING logo"  />
+				</div>
+				<div class="project-overlay">
+					<h3>ING Direct Italia Mobile Application</h3>
+					<p>
+						I worked on the server side team for the creation of backend services for our Android and Iphone mobile applications. We work on the creation of a framework that let you control app pages and design directly from server side. 	
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/wbw8-1.jpg" alt="Webank windows8 screen1"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Webank Windows8</h3>
+					<p>
+						In this project we used our previous experience in PagineGialle creating highly customizable user controls. As a Windows 8 developer I worked on the creation custom user controls allowing us to have a more fine grained control on what we want to show on application.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/uniiphone-1.jpg" alt="Unicredit Iphone screen1"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Unicredit Iphone demo</h3>
+					<p>
+						As an iOS developer I work in creating a demo disabling all the interactions and securities unwanted for the demo on our mobile banking application.
+					</p>
+				</div>
+			</div>	
+			<div class="col-md-4 col-sm-6 col-xs-6 project-box" >
+				<div class="project-bg">
+					<img src="res/img/PG-1.jpg" alt="Pagine Gialle screen1"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Pagine Gialle/Bianche Windows 8 and Windows Phone</h3>
+					<p>
+						As a Windows 8 developer we create one of the very first app on the italian Windows 8 market. I also worked for the already in production Windows Phone apps.
+					</p>
+				</div>
+			</div>		
+					
+		</div>
+		<div id="personal-projects" class="personal-projects color-line col-md-12">
+			<h2>...and these are some of my personal projects </h2>
+			<h4>I love keeping personal project (when I have time), you can innovate and learn as much as possible with these projects. Sometimes they ends up to be public sometimes not, but who cares... I had fun!</h4>
+			<div class="col-md-4 project-box" >
+				<div class="project-bg">
+					<img src="res/img/teatronelbicchiere.png" alt="Teatro nel bicchiere"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Teatro nel bicchiere 2013</h3>
+					<p>
+						A website for a theatre and performance festival hosted in Tuscany on summer 2013.  Developed with Jquery, Html5 and CSS3. 
+						<a href="http://www.teatronelbicchiere.it">www.teatronelbicchiere.it (the website of the latest edition)</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 project-box" >
+				<div class="project-bg">
+					<img src="res/img/ssak.png" alt="SSAK"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Server swiss army knife</h3>
+					<p>
+						A plugin based tool to help developer in everyday work, avalaible either in PyQt or in NodeJS+REST+Jquery website.
+						<a href="http://git.io/YomJpA">GitHub Link</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 project-box" >
+				<div class="project-bg">
+					<img src="res/img/mandingofrog.png" alt="Mandingo frog"  />
+				</div>
+				<div class="project-overlay">
+					<h3>Mandingo frog</h3>
+					<p>
+						Our motto is "super cool apps in 5 minutes/man", we create funny and careless Android apps.
+						<a href="http://goo.gl/YZCji0">Play Store Link</a>
+					</p>
+				</div>
+			</div>
+		</div>
+					
+		<div id="wasted-creativity" class="wasted-creativity color-line col-md-12">
+			<h2>and when I'm done with coding I use my creativity</h2>
+			<h4>Well, unluckily my creative ideas are not supported by skills anyway I love vector graphics and photograpy and I have fun testing and try to discover new techniques. This are some example of how I waste my creativity...</h4>	
+			<div class="col-md-12 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/keepcalmhoriz.png" alt="Keepcalmhoriz">
+				</div>
+				<div class="project-overlay">
+					<h3>Life in MK "art"</h3>
+					<p>
+						Everybody have something to complain about Milton Keynes. However we believe that Milton Keynes is a magic place that all the weird funny and strange thing happen altogheter. We created a tumblr/twitter/facebook page to collect them and share with the world how awesome this town is. <a href="http://lifeinmk.tumblr.com">lifeinmk.tumblr.com</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/tg8bwok.png" alt="Tg8bwok">
+				</div>
+				<div class="project-overlay">
+					<h3>The 8-bit wave off Kanagawa</h3>
+					<p>
+						Bit after bloody bit vector illustration.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/bletcleygif.gif"  alt="Bletcleygif">
+				</div>
+				<div class="project-overlay">
+					<h3>Minimalistic gif</h3>
+					<p>
+						Took in the computer musuem of Bletchley Park
+					</p>
+				</div>
+			</div>
+					
+			<div class="col-md-12 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/dslr.jpg"  alt="Dslr">
+				</div>
+				<div class="project-overlay">
+					<h3>Oh Toad!</h3>
+					<p>
+						Of course I have a DSLR, and I waste my creativity also in this field! I have even created a <a href="https://500px.com/canc3l">500px account!</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/simplerevolution.png" alt="Simplerevolution">
+				</div>
+				<div class="project-overlay">
+					<h3>Only simple revolutions</h3>
+					<p>
+						Minimalistic cover based on Only revolutions album art of Biffy Cliro.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/sunsethdr.jpg" alt="Sunsethdr">
+				</div>
+				<div class="project-overlay">
+					<h3>HDR Sunset</h3>
+					<p>
+						My first good looking HDR picture.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 project-box" >
+				<div class="project-bg">
+					<img src="img/wasted-creativity/otsurvival.png" alt="Otsurvival">
+				</div>
+				<div class="project-overlay">
+					<h3>I made infographic too</h3>
+					<p>
+						When I'm not able to speak but I want to say something I made infographic! For example <a href="http://www.matteocancellieri.com/dominika.html">this</a> or <a href="http://www.matteocancellieri.com/otsurvivalguide.htm">or this.</a>
+					</p>
+				</div>
+			</div>
+					
+					
+		</div>				
+		<hr>
+
+		<footer>
+			<p>Matteo Cancellieri 2015</p>
+
+		</div>
+		<!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/ekko-lightbox.min.js" type="text/javascript" charset="utf-8"></script>
+			
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/main.js"></script>
+			
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
+			</script>
+		</body>
+		</html>

@@ -1,162 +1,167 @@
-[
-    {
-        "name": "SOAP",
-        "value": 70
+{ "skills":[
+  {
+    "name": "SOAP",
+    "value": 65
+  },
+  {
+    "name": "REST",
+    "value": 75
+  },
+  {
+    "name": "J2EE",
+    "value": 70
+  },
+  {
+    "name": "Spring",
+    "value": 75
+  },
+  {
+    "name": "SVN",
+    "value": 91
+  },
+  {
+    "name": "GIT",
+    "value": 85
+  },
+  {
+    "name": "Maven",
+    "value": 80
+  },
+  {
+    "name": "Ant",
+    "value": 75
+  },
+  {
+    "name": "Jenkins",
+    "value": 75
+  },
+  {
+    "name": "TDD",
+    "value": 55
+  },
+  {
+    "name": "XCode",
+    "value": 30
+  },
+  {
+    "name": "iOS",
+    "value": 35
+  },
+  {
+    "name": "C#",
+    "value": 45
+  },
+  {
+    "name": "Visual Studio",
+    "value": 35
+  },
+  {
+    "name": "WP",
+    "value": 40
+  },
+  {
+    "name": "Windows 8",
+    "value": 40
+  },
+  {
+    "name": "Eclipse",
+    "value": 60
+  },
+  {
+    "name": "ADT",
+    "value": 45
+  },
+  {
+    "name": "Netbeans",
+    "value": 95
+  },
+  {
+    "name": "Gdb",
+    "value": 20
+  },
+  {
+    "name": "C",
+    "value": 35
+  },
+  {
+    "name": "Java",
+    "value": 80
+  },
+  {
+    "name": "Python",
+    "value": 72
+  },
+  {
+    "name": "HTML",
+    "value": 90
+  },
+  {
+    "name": "CSS3",
+    "value": 88
+  },
+  {
+    "name": "PHP",
+    "value": 85
+  },
+  {
+    "name": "JSTL",
+    "value": 60
+  },
+  {
+    "name": "Javascript",
+    "value": 80
+  },
+  {
+    "name": "NodeJS",
+    "value": 40
+  },
+  {
+    "name": "Jquery",
+    "value": 80
+  },
+  {
+    "name": "MySQL",
+    "value": 70
+  },
+  {
+    "name": "Oracle SQL",
+    "value": 35
+  },
+  {
+    "name": "Tomcat",
+    "value": 80
     },
-    {
-        "name": "REST",
-        "value": 65
-    },
-    {
-        "name": "J2EE",
-        "value": 70
-    },
-    {
-        "name": "Spring",
-        "value": 75
-    },
-    {
-        "name": "SVN",
-        "value": 91
-    },
-    {
-        "name": "GIT",
-        "value": 60
-    },
-    {
-        "name": "Maven",
-        "value": 80
-    },
-    {
-        "name": "Ant",
-        "value": 75
-    },
-    {
-        "name": "Jenkins",
-        "value": 65
-    },
-    {
-        "name": "TDD",
-        "value": 45
-    },
-    {
-        "name": "XCode",
-        "value": 30
-    },
-    {
-        "name": "iOS",
-        "value": 35
-    },
-    {
-        "name": "C#",
-        "value": 45
-    },
-    {
-        "name": "Visual Studio",
-        "value": 35
-    },
-    {
-        "name": "WP",
-        "value": 40
-    },
-    {
-        "name": "Windows 8",
-        "value": 40
-    },
-    {
-        "name": "Eclipse",
-        "value": 60
-    },
-    {
-        "name": "ADT",
-        "value": 45
-    },
-    {
-        "name": "Netbeans",
-        "value": 95
-    },
-    {
-        "name": "Gdb",
-        "value": 20
-    },
-    {
-        "name": "C",
-        "value": 35
-    },
-    {
-        "name": "Java",
-        "value": 80
-    },
-    {
-        "name": "Python",
-        "value": 72
-    },
-    {
-        "name": "HTML",
-        "value": 83
-    },
-    {
-        "name": "CSS",
-        "value": 71
-    },
-    {
-        "name": "PHP",
-        "value": 59
-    },
-    {
-        "name": "JSTL",
-        "value": 60
-    },
-    {
-        "name": "Javascript",
-        "value": 85
-    },
-    {
-        "name": "NodeJS",
-        "value": 40
-    },
-    {
-        "name": "Jquery",
-        "value": 80
-    },
-    {
-        "name": "Dojo",
-        "value": 20
-    },
-    {
-        "name": "MDF",
-        "value": 15
-    },
-    {
-        "name": "MySQL",
-        "value": 70
-    },
-    {
-        "name": "Oracle SQL",
-        "value": 35
-    },
-    {
-        "name": "Tomcat",
-        "value": 80
-    },
-    {
-        "name": "WebSphere",
-        "value": 45
-    },
-    {
-        "name": "JBoss",
-        "value": 35
-    },
-    {
-        "name": "Linux",
-        "value": 85
-    },
-    {
-        "name": "Bash",
-        "value": 75
-    },
-    {
-        "name": "Networks",
-        "value": 65
-    }
+  {
+    "name": "WebSphere",
+    "value": 45
+  },
+  {
+    "name": "JBoss",
+    "value": 35
+  },
+  {
+    "name": "Linux",
+    "value": 85
+  },
+  {
+    "name": "Bash",
+    "value": 75
+  },
+  {
+    "name": "Drupal",
+    "value": 85
+  },
+  {
+    "name": "Symfony",
+    "value": 73
+  },
+  {
+    "name": "Elastic Search",
+    "value": 65
+  },
+  {
+    "name": "Bootstrap",
+    "value": 71
+  }
 ]
+}
