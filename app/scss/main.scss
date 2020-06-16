@@ -199,10 +199,39 @@ a:visited {
   order: 2;
 }
 
+.profile-maker {
+  @extend .stripe;
+  color: #ffffff;
+  background: $color4 url(../images/makerstrasp.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
+}
+
+.profile-maker--text {
+  width:100vw;
+  display:inline-block;
+  @media(min-width: $screen-m) {
+    width:50vw;
+  }
+}
+
+.profile-maker--image {
+  max-width: 80vw;
+  @media(min-width: $screen-m) {
+    float: right;
+    max-width:30vw;
+  }
+}
+
+.profile-maker--wrapper {
+  @extend .wrapper;
+
+}
+
 .profile-projects {
   @extend .stripe;
-  background-color: $color3;
   color: #ffffff;
+  background: $color3 url(../images/codetrasp.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
 }
 
 .profile-projects--wrapper {
@@ -283,10 +312,11 @@ a:visited {
 
 .profile-photoprojects {
   @extend .stripe;
-  background-color: $color2;
   color: #ffffff;
   min-height: 100vh;
   padding: 0 0;
+  background: $color2 url(../images/cameratrasp.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
 }
 
 .profile-photoprojects--wrapper {

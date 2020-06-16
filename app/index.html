@@ -187,6 +187,25 @@
             </div>
         </div>
     </div>
+    <div class="profile-maker">
+        <div class="profile-maker--wrapper">
+            <h2>Knowledge Makers</h2>
+            <p class="profile-maker--text">
+                I am the co-founder of <a href="https://twitter.com/KMakersOU">Knowledge Makers</a>. We organised plenty
+                of events internal and external to the Open University.
+                We created a community that involves and makes possible contacts between the maker world and the
+                academia.
+                We ran popular workshops and meetings from teaching people how to code to the complexities of writing
+                code for robots.
+                We promote the maker culture and we successfully created connections across academia.
+                You can follow us on <a href="https://twitter.com/KMakersOU">Twitter</a> or <a
+                    href="mailto:knowledgemakers@googlegroups.com">join the mailing list.</a>
+            </p>
+            <img class="profile-maker--image" alt="Knowledge Makers!" src="images/makers.gif"/>
+
+        </div>
+    </div>
+
     <div class="profile-projects">
         <div class="profile-projects--wrapper">
             <h2>Coding projects</h2>
@@ -200,21 +219,15 @@
                 <p>
                     <a href="https://core.ac.uk">CORE</a> is an Open Access research paper aggregation service.
                     Since 2015, I worked on all the levels of the technological stack, from the frontend interface
-                    built
-                    with PHP and Symfony and deployed on AWS to the ingestion pipeline that I helped re-design and
+                    to the ingestion pipeline that I helped re-design and
                     it is
                     making the system ingesting, processing and enriching a massive amount of data every day (<a
                         href="https://oro.open.ac.uk/51070/"> we have a paper on it</a>
 
-                    Moreover, I contributed in developing some of the main tool that are used in the service, such
-                    as
-                    the <a href="https://core.ac.uk/services#dashboard"> Repository Dashboard</a> the RIOXX
-                    compliance
-                    checker, and the enrichment of our metadata using a cluster to run Hadoop jobs.
-
-                    I am also interested in analyising the millions of paper we have and find interesting insights,
-                    we
-                    ran few experiments and they are all available on <a
+                    I am the lead developer and we are continuously integrating new services to promote the growth of
+                    Open Access around world.
+                    Our data is a treasure trove of information ready to be captured, I love performing data science and
+                    NLP tasks on it when I can. You can find some examples on our <a
                         href="https://github.com/oacore">Github </a>
                 </p>
             </div>
@@ -227,11 +240,11 @@
                 </picture>
                 <p><a href="https://fosteropenscience.eu">FOSTER</a> A platform for open access resources, it's
                     helping
-                    people divulgating the Open Access priciples across the Europe. We reached a great success with
+                    people promoting the Open Access principles across Europe. We reached a great success with
                     the
-                    first project (FOSTER) and now we have new european project fundigs for it.
+                    first project (FOSTER) and now we have new european project funding for it.
                     I worked on this Drupal platform from the very first minute, I recently supervised the move from
-                    Drupal7 to Drupal8 and the revamping of the user interface to kick start the new fundings. </p>
+                    Drupal 7 to Drupal 8 and the revamping of the user interface to kick start the new funding. </p>
             </div>
             <div class="profile-project">
                 <picture>
@@ -297,9 +310,6 @@
                             href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
                         International (CC BY 4.0)</a></small>
                 </p>
-                <p>
-                    <small> But why a gull? Why not, he's called Herman, he lives in my car.</small>
-                </p>
                 <h3>After all of this, you can still contact me</h3>
                 <div class="profile-header--icons">
                     <a class="profile-header--icon" href="mailto:matteo.cancellieri@gmail.com">
@@ -343,21 +353,18 @@
 </article>
 
 <script src="js/app.js" async></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47317758-1"></script>
 <script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function () {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-47317758-1');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-47317758-1');
 </script>
 </body>
 </html>
