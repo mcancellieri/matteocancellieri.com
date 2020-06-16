@@ -1,27 +1,35 @@
 @import 'variables.scss';
 
-body {
-	height:100%;
-	font-family: 'Merriweather', Lato, serif;
-	margin:0px;
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
-	font-weight: normal;
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: normal;
 }
 
 a {
-	text-decoration:underline;
-	font-weight: bold;
-	color: inherit; 
+  text-decoration: underline;
+  font-weight: bold;
+  color: inherit;
 }
 
+
 a:hover {
-	color:inherit; 
+  color: inherit;
 }
+
 a:visited {
-	color:inherit; 
+  color: inherit;
 }
 
 #skiptocontent {
@@ -33,51 +41,67 @@ a:visited {
 }
 
 .wrapper {
-	padding:25px;
-	@media(min-width: $screen-l){
-		width: $screen-l;
-		margin:auto;
-	}
+  padding: 25px;
+  @media(min-width: $screen-xl) {
+    width: $screen-xl;
+    margin: auto;
+  }
 }
 
 .stripe {
-	width:100%;
-	display:inline-block;
-	padding: 50px 0;
+  width: 100%;
+  display: inline-block;
+  padding: 50px 0;
 }
 
 
-.header-bar{
-	height:60px;
-	width:100%;
-	position:fixed;
-	top:0;
-	line-height: 60px;
-	background-color: $header-color;
-	text-align:center;
-	color:#fff;
+.header-bar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  line-height: 60px;
+  background-color: $header-color;
+  text-align: center;
+  color: #fff;
 }
 
 .header-bar--wrapper {
-	@extend .wrapper;
-	padding:0px;
-	padding-top: 10px;
+  @extend .wrapper;
+  padding: 0px;
+  padding-top: 10px;
 }
-.header-bar img{
-	height:40px;
+
+.header-bar img {
+  height: 40px;
 }
-.header-bar--title{
-	position:relative;
-	top:-10px;
-	display:inline-block;
-	font-size:1.2rem;
-	font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
+
+.header-bar--title {
+  position: relative;
+  top: -10px;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
 }
 
 .slideUp {
   -webkit-transform: translateY(-100px);
   transform: translateY(-100px);
   transition: transform .5s ease-out;
+}
+
+.disappear {
+  max-height: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: height .5s ease-out;
+}
+
+.appear {
+  max-height: 100%;
+  transition: max-height .5s ease-out;
 }
 
 .slideDown {
@@ -87,108 +111,278 @@ a:visited {
 }
 
 .profile-header {
-	background-color:$header-color;
-	color:white;
-	padding-top:15px;
-	@extend .stripe;
-}  
+  background-color: $header-color;
+  color: white;
+  padding-top: 15px;
+  @extend .stripe;
+}
+
 .profile-header--wrapper {
-	@extend .wrapper;
-}  
-
-.profile-header--image{
-	text-align:center;
-}
-.profile-header--image img{
-	width:200px;
-}
-.profile-header--me{
-	margin-right:15px;
-	margin-bottom:15px;
-	@media(min-width: $screen-m){
-		float:left;
-	}
-}
-.profile-header--bio {
-	font-size:1.5rem;
-	line-height: 2rem;
-}  
-
-.profile-header--icons{
-	display:inline-block;
+  //@extend .wrapper;
 }
 
-.profile-header--icon{
-	text-decoration:none;
-	margin-left: 5px;
+.profile-header--hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/assets/photoprojects/between/chalk.jpg");
+
+  /* Set a specific height */
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
+
+.profile-header--hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.profile-header--hero-text img {
+  width: 20vw;
+  height: 20vh;
+  min-width: 50px;
+}
+
+.profile-header--image {
+  text-align: center;
+}
+
+
+.profile-header--icons {
+  display: inline-block;
+}
+
+.profile-header--icon {
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.profile-bio {
+  @extend .stripe;
+  background-color: $header-color;
+}
+
+.profile-bio--wrapper {
+  @extend .wrapper;
+}
+
+.profile-bio--item {
+  display: block;
+  width: 100%;
+  align-items: center;
+  @media(min-width: $screen-xl) {
+    display: flex;
+  }
+}
+
+.profile-bio--item-img {
+  height: 15vh;
+  width: 15vw;
+  min-width: 200px;
+  order: 1;
+
+}
+
+.profile-bio--item-text {
+  color: white;
+  font-size: 1.5rem;
+  vertical-align: center;
+  order: 2;
+}
+
 .profile-projects {
-	@extend .stripe;
+  @extend .stripe;
+  background-color: $color3;
+  color: #ffffff;
 }
 
 .profile-projects--wrapper {
-	@extend .wrapper;
+  @extend .wrapper;
 }
 
 .profile-project {
-	display:inline-block;
+  display: inline-block;
 }
+
 .profile-project--img {
-	margin-bottom:15px;
-	@media(min-width: $screen-m){
-		float:left;
-		margin-right:15px;
-	}
+  margin-bottom: 15px;
+  @media(min-width: $screen-m) {
+    float: left;
+    margin-right: 15px;
+  }
 }
+
 .profile-project--past .profile-project--img {
-	margin-right:10px;
-	margin-top:30px;
-	float:none;
+  margin-right: 10px;
+  margin-top: 30px;
+  float: none;
 }
 
 .profile-project--imgstrip {
-	text-align: center;
+  text-align: center;
 }
 
-.profile-header--title{
-	text-align: center;
-	margin-top: 0px;
+.profile-header--title {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .profile-header--site-name {
-	position:relative;
-	top:0px;
-}
-.profile-skills{
-	background-color:#e0e0e0;
-	overflow:hidden;
-	@extend .stripe;
-}
-.skills {
-	padding:0px;
-	@extend .wrapper;
+  position: relative;
+  top: 0px;
 }
 
-.skills svg{
-	font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
-	font-weight: normal;
+.profile-skills {
+  background-color: #e0e0e0;
+  overflow: hidden;
+  @extend .stripe;
+}
+
+.skills {
+  padding: 0px;
+  @extend .wrapper;
+}
+
+.skills svg {
+  font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 .footer {
-	background-color:$footer-color;
-	color:white;
-	min-height: 300px;
-	@extend .stripe;
+  background-color: $footer-color;
+  color: white;
+  min-height: 300px;
+  @extend .stripe;
 
 }
 
 .footer--wrapper {
-	@extend .wrapper;
+  @extend .wrapper;
 }
 
-.profile-footer--image{
-	float:right;
+.profile-footer--image {
+  float: right;
 }
-.profile-footer--image img{
-	width:200px;
+
+.profile-footer--text {
+  display: inline-block;
+}
+
+.profile-footer--image img {
+  width: 200px;
+}
+
+.profile-photoprojects {
+  @extend .stripe;
+  background-color: $color2;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 0 0;
+}
+
+.profile-photoprojects--wrapper {
+  @extend .wrapper;
+  padding-top: 50px;
+}
+
+.profile-photoproject {
+  overflow: hidden;
+  float: left;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.profile-photoproject img {
+  width: 80%;
+  height: 80%;
+  @media(min-width: $screen-l) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.profile-gallery {
+  @extend .stripe;
+  padding-top: 0;
+}
+
+.profile-gallery--wrapper {
+  @extend .wrapper;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  vertical-align: middle;
+  height: 100vh;
+}
+
+
+.profile-gallery--next {
+  //height: 100%;
+  font-size: 2rem;
+  order: 3;
+}
+
+.profile-gallery--prev {
+  //height: 100%;
+  font-size: 2rem;
+  order: 1;
+}
+
+.profile-gallery--images {
+  display: inline-block;
+  order: 2;
+  width: 100%;
+}
+
+.profile-gallery--image img {
+  max-width: 70vw;
+  max-height: 70vh;
+
+}
+
+.profile-gallery--meta {
+  margin-bottom: 25px;
+  max-height: 10%;
+}
+
+.profile-gallery--meta--caption {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-gallery--meta--location {
+  font-style: italic;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 50%;
+  display: none;
+  height: 100%; /* Full height (cover the whole page) */
+  background-color: transparent;
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#profile-gallery--overlayprev {
+  @extend .overlay;
+  top: 0;
+  left: 0;
+}
+
+#profile-gallery--overlaynext {
+  @extend .overlay;
+  top: 0;
+  right: 0;
 }
