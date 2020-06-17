@@ -93,10 +93,10 @@ a:visited {
   font-size: 1.5rem;
   line-height: 2rem; }
 
-.profile-header--icons {
+.profile-contact--icons {
   display: inline-block; }
 
-.profile-header--icon {
+.profile-contact--icon {
   text-decoration: none;
   margin-left: 5px; }
 
