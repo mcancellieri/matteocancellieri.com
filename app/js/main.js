@@ -23,9 +23,9 @@ function showHideBar(e) {
         header.classList.add("slideDown");
     }
     if (!window.showGallery && window.galleryDisappearOnNextScroll) {
-        window.gallery.hide();
+        //window.gallery.hide();
         window.galleryDisappearOnNextScroll=false;
-        scrollTo(document.getElementById("photoprojects"))
+        //scrollTo(document.getElementById("photoprojects"))
 
     }
     if (window.showGallery) {
@@ -45,7 +45,7 @@ function scrollTo(element) {
         top: element.offsetTop
     });
 }
-
+window.scrollToElement = scrollTo;
 window.addEventListener('scroll', showHideBar);
 
 showHideBar(null);

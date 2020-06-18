@@ -63,6 +63,10 @@ window.gallery =
                     window.gallery.prev();
                     return false;
                 }
+                if (event.key==="Esc" || event.key === "Escape"){
+                    window.gallery.hide();
+                    return false;
+                }
             });
         },
         next: function () {
@@ -92,6 +96,8 @@ window.gallery =
             document.getElementById("profile-gallery--overlaynext").style.display = "block";
             document.getElementById("gallery-prev").style.display = "block";
             document.getElementById("gallery-next").style.display = "block";
+            document.getElementById("gallery-close").style.display = "block";
+            window.scrollToElement(document.getElementById("gallery"))
         }
         ,
         hide: function () {
@@ -101,6 +107,8 @@ window.gallery =
             document.getElementById("profile-gallery--overlaynext").style.display = "none";
             document.getElementById("gallery-prev").style.display = "none";
             document.getElementById("gallery-next").style.display = "none";
+            document.getElementById("gallery-close").style.display = "none";
+            window.scrollToElement(document.getElementById("photoprojects"))
         }
     }
 ;
