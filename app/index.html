@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#2F3638">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal website of Matteo Cancellieri, photographer, developer, maker.">
-    <script type="application/ld+json" >
+    <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "Person",
@@ -71,8 +71,8 @@
                     <a class="profile-contact--icon" href="https://twitter.com/CancM">
                         <img alt="Tweet to me on Twitter" src="images/twitter.svg"/>
                     </a>
-                   <a class="profile-contact--icon" href="https://www.facebook.com/matteo.cancellieri">
-                       <img alt="Friend me on Facebook" src="images/facebook.svg"/>
+                    <a class="profile-contact--icon" href="https://www.facebook.com/matteo.cancellieri">
+                        <img alt="Friend me on Facebook" src="images/facebook.svg"/>
                     </a>
                 </div>
             </div>
@@ -112,21 +112,58 @@
     <div class="profile-artist">
         <div class="profile-artist--wrapper">
             <h2>Making art</h2>
-            <p class="profile-artist--text">
-                Creativity has been part of what I am since I was a kid.
-                Nowadays, I work in different media and try anything that can take me to the results I envisioned in my head.
-                <br>
-                Making art for me is a form of meditation, when I am working I feel in the perfect place and immerse myself fully.
-                I am not perfect or precise, but I love when a mistake turn out to be the right choice.
-                <br>
-                You can see my work on <a href="https://www.instagram.com/cancellieri.matteo/">Instagram</a>
-                or come and see me in real life at the various art events and exhibition I run with the
-                <a href="https://lbas.org.uk">Leighton Buzzard Art Society</a>.
-                <br>
-                Oh, and please get in touch if you want to commission something
-                or have any crazy idea or project you would like to work with me on :)
-            </p>
-            <img class="profile-artist--image" alt="A robin!" src="images/robin.png"/>
+            <div>
+                <p class="profile-artist--text">
+                    Creativity has been part of what I am since I was a kid.
+                    Nowadays, I work in different media and try anything that can take me to the results I envisioned in
+                    my head.
+                    <br>
+                    Making art for me is a form of meditation, when I am working I feel in the perfect place and immerse
+                    myself fully.
+                    I am not perfect or precise, but I love it when a mistake turns out to be the right choice.
+                    <br>
+                    You can see a selection of my work in the thematic galleries below and on <a href="https://www.instagram.com/cancellieri.matteo/">Instagram</a>.
+                    Even better, you can come and meet me in real life at the various art events and exhibition we run with the
+                    <a href="https://lbas.org.uk">Leighton Buzzard Art Society</a>.
+                    <br><br>
+                    Oh, and please get in touch if you want to buy any of the artworks or commission something
+                    or have any crazy idea or project you would like to work with me on :)
+                </p>
+                <img class="profile-artist--image" alt="A robin!" src="images/robin.png"/>
+            </div>
+            <div class="profile-artist-galleries">
+                <div class="profile-photoproject">
+                    <a href="#gallery" onclick="gallery.open('animals')">
+                        <picture>
+                            <source srcset="images/assets/photoprojects/animalscover.webp" type="image/webp">
+                            <source srcset="images/assets/photoprojects/animalscover.png" type="image/png">
+                            <img class="profile-project--img" src="images/assets/photoprojects/animalscover.png"
+                                 alt="Between project cover"/>
+                        </picture>
+                    </a>
+                </div>
+                <div class="profile-photoproject">
+                    <a href="#gallery" onclick="gallery.open('landscape')">
+                        <picture>
+                            <source srcset="images/assets/photoprojects/landscapecover.webp" type="image/webp">
+                            <source srcset="images/assets/photoprojects/landscapecover.png" type="image/png">
+                            <img class="profile-project--img" src="images/assets/photoprojects/landscapecover.png"
+                                 alt="Between project cover"/>
+                        </picture>
+                    </a>
+                </div>
+                <div class="profile-photoproject">
+                    <a href="#gallery" onclick="gallery.open('else')">
+                        <picture>
+                            <source srcset="images/assets/photoprojects/elsecover.webp" type="image/webp">
+                            <source srcset="images/assets/photoprojects/elsecover.png" type="image/png">
+                            <img class="profile-project--img" src="images/assets/photoprojects/elsecover.png"
+                                 alt="Between project cover"/>
+                        </picture>
+                    </a>
+                </div>
+
+            </div>
         </div>
     </div>
     <div class="profile-photoprojects">

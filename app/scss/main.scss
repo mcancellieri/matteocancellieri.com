@@ -237,6 +237,15 @@ a:visited {
   }
 }
 
+.profile-artist--image {
+  display:none;
+  max-width: 50vw;
+  @media(min-width: $screen-m) {
+    float: right;
+    max-width: 20vw;
+  }
+}
+
 .profile-maker--wrapper, .profile-artist--wrapper {
   @extend .wrapper;
 
@@ -366,15 +375,23 @@ a:visited {
   display: flex;
   align-items: center;
   vertical-align: middle;
-  height: 100vh;
   padding: 0;
   position:relative;
+  width:100%;
+  height: 100%;
+}
+
+.profile-artist-galleries {
+  width: 100%;
+  display:inline-block;
+  margin-top:30px;
 }
 
 .profile-gallery--close {
-  position: absolute;
-  top: 2vh;
-  opacity: 0.3;
+  position: fixed;
+  top: 6vh;
+  float:left;
+  opacity: 1;
   z-index: 3;
 }
 .profile-gallery--close:hover{
