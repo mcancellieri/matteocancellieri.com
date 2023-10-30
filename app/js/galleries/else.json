@@ -1,0 +1,31 @@
+{
+  "title": "Everything else",
+  "description": "Not an animal or a landscape",
+  "gallery": [
+    {
+      "caption": "Sunday morning",
+      "location": "Gouache on paper",
+      "image": "nonnas"
+    },
+    {
+      "caption": "The reason why they don't let me redecorate the church",
+      "location": "Acrylics.",
+      "image": "church"
+    },
+    {
+      "caption": "California Rusty",
+      "location": "Acrylics",
+      "image": "rusty_small"
+    },
+    {
+      "caption": "Santa's sway",
+      "location": "Ink",
+      "image": "santasway"
+    },
+    {
+      "caption": "XMAS Eve",
+      "location": "Ink",
+      "image": "xmaseve"
+    }
+  ]
+}

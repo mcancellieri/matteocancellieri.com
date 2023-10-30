@@ -1,11 +1,11 @@
 #!/bin/bash
 
-FILES="$1/*.png"
+FILES="$1/*.jpg"
 
 for f in $FILES
 do
   echo $f
-	filename="${f##*/.png}"
+	filename="${f##*/.jpg}"
   extension="${filename##*.}"
   filename="${filename%.*}"
 	echo $filename

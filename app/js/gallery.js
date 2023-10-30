@@ -108,7 +108,7 @@ window.gallery =
             document.getElementById("gallery-prev").style.display = "none";
             document.getElementById("gallery-next").style.display = "none";
             document.getElementById("gallery-close").style.display = "none";
-            window.scrollToElement(document.getElementById("photoprojects"))
+            window.scrollToElement(document.getElementById("profile-artist-galleries"))
         }
     }
 ;

@@ -1,0 +1,31 @@
+{
+  "title": "Landscape",
+  "description": "More horizontal than portrait",
+  "gallery": [
+    {
+      "caption": "Murmurations",
+      "location": "Acrylics on paper",
+      "image": "murmurations_small"
+    },
+    {
+      "caption": "Shaftesbury avenue",
+      "location": "Acrylics. After a workshop with Adebanji Alade",
+      "image": "londonstride"
+    },
+    {
+      "caption": "Oh the British Summer",
+      "location": "Watercolour and pencils",
+      "image": "ohbritishsummer"
+    },
+    {
+      "caption": "Cairo",
+      "location": "Watercolour and pencils",
+      "image": "cairo"
+    },
+    {
+      "caption": "Henley",
+      "location": "Watercolour and oil pastels",
+      "image": "henley"
+    }
+  ]
+}
