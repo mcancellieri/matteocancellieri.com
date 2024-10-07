@@ -20,9 +20,10 @@
   "homepage": "https://github.com/mcancellieri/matteocancellieri.com#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@parcel/packager-raw-url": "2.8.3",
-    "@parcel/transformer-jsonld": "2.8.3",
-    "@parcel/transformer-sass": "2.8.3",
+    "@parcel/packager-raw-url": "2.12.0",
+    "@parcel/resolver-glob": "^2.12.0",
+    "@parcel/transformer-jsonld": "2.12.0",
+    "@parcel/transformer-sass": "2.12.0",
     "cssnano": "^6.0.1",
     "glightbox": "^2.0.5",
     "parcel": "^2.8.3",
@@ -39,5 +40,8 @@
     "style-loader": "^1.1.4",
     "webpack": "^4.43.0",
     "webpack-dev-server": "^4.15.0"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
   }
 }

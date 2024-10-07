@@ -246,6 +246,25 @@ a:visited {
   }
 }
 
+.profile-artist--highlight {
+  background-color: #942826;
+  padding: 15px 15px 15px 30px;
+  display:inline-block;
+  width: 80%;
+  margin:50px;
+}
+
+.profile-artist--highlight p {
+  float:left;
+  width: 70%;
+}
+
+.profile-artist--highlight-image{
+  float:right;
+  max-width: 25vw;
+  margin-right:30px;
+}
+
 .profile-maker--wrapper, .profile-artist--wrapper {
   @extend .wrapper;
 
@@ -463,4 +482,8 @@ a:visited {
   @extend .overlay;
   top: 0;
   right: 0;
+}
+
+.scaryones--main {
+  padding:50px;
 }

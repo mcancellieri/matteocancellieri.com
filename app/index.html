@@ -5,11 +5,11 @@
     <title>Matteo Cancellieri personal website</title>
     <!--link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="all" rel="stylesheet"-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Merriweather:300,700" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
-    <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#787474">
-    <link rel="shortcut icon" href="./images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#787474">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico">
     <meta name="theme-color" content="#2F3638">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal website of Matteo Cancellieri, photographer, developer, maker.">
@@ -111,7 +111,20 @@
     </div>
     <div id="profile-artist-galleries" class="profile-artist">
         <div class="profile-artist--wrapper">
-            <h2>Making art</h2>
+            <h1>Making art</h1>
+            <div class="profile-artist--highlight">
+                <h2>I have made some cards!</h2>
+                <p class="profile-artist--text">
+                    During August and September 2024 I participated in a Daily Drawing challenge with the <a href="https://lbas.org.uk">Leighton Buzzard Art Society</a>.
+                    This time instead of only producing an image I decided to put myself into a marathon and produce a full deck of card illustrations. The cards are based on my take on monsters and
+                    they will be out by Halloween 2024!.
+                    The cards are 40 with 4 suits and are inspired by the traditional Italian cards.
+                    I made a bonus page including the instructions for many games based on italian traditional games for children and adults adapted for The Scary Ones. Enjoy it!
+                    <br><br>
+                <b><a href="/scaryones">Click here to go to The scary ones page!</a></b>
+                </p>
+                <img class="profile-artist--highlight-image" alt="Card preview!" src="images/thescaryones_pack.png" />
+            </div>
             <div>
                 <p class="profile-artist--text">
                     Creativity has been part of what I am since I was a kid.
@@ -122,8 +135,10 @@
                     myself fully.
                     I am not perfect or precise, but I love it when a mistake turns out to be the right choice.
                     <br>
-                    You can see a selection of my work in the thematic galleries below and on <a href="https://www.instagram.com/cancellieri.matteo/">Instagram</a>.
-                    Even better, you can come and meet me in real life at the various art events and exhibition we run with the
+                    You can see a selection of my work in the thematic galleries below and on <a
+                        href="https://www.instagram.com/cancellieri.matteo/">Instagram</a>.
+                    Even better, you can come and meet me in real life at the various art events and exhibition we run
+                    with the
                     <a href="https://lbas.org.uk">Leighton Buzzard Art Society</a>.
                     <br><br>
                     Oh, and please get in touch if you want to buy any of the artworks or commission something
@@ -168,7 +183,6 @@
     </div>
     <div class="profile-photoprojects">
         <div id="photoprojects" class="profile-photoprojects--wrapper">
-
             <h1>Photographic projects</h1>
             <div class="profile-photoproject">
                 <a href="#gallery" onclick="gallery.open('zdrowie')">
@@ -205,10 +219,10 @@
                     <div id="profile-gallery--overlayprev" class="profile-gallery-overlay"></div>
                     <div id="profile-gallery--overlaynext" class="profile-gallery-overlay"></div>
                     <div id="gallery-close" class="profile-gallery--close" onclick="gallery.hide()" hidden>
-                        <img alt="prev" src="images/close.svg"/>
+                        <img alt="prev" src="./images/close.svg"/>
                     </div>
                     <div id="gallery-prev" class="profile-gallery--prev" onclick="gallery.prev()" hidden>
-                        <img alt="prev" src="images/prev.svg"/>
+                        <img alt="prev" src="./images/prev.svg"/>
                     </div>
                     <div id="gallery-items" class="profile-gallery--images">
                         <div class="profile-gallery--meta">
@@ -216,14 +230,17 @@
                             <div id="currentLocation" class="profile-gallery--meta--location"></div>
                         </div>
                         <picture>
-                            <source id="currentSourceWebp" srcset=" " type="image/webp">
-                            <source id="currentSourceJpg" srcset=" " type="image/jpg">
-                            <img id="currentImage" src=" "
+                            <source id="currentSourceWebp" srcset="images/assets/photoprojects/betweencover.webp"
+                                    type="image/webp">
+                            <source id="currentSourceJpg" srcset="images/assets/photoprojects/betweencover.webp"
+                                    type="image/jpg">
+                            <img id="currentImage" src="images/assets/photoprojects/betweencover.webp"
                                  alt=""/>
                         </picture>
+
                     </div>
                     <div id="gallery-next" class="profile-gallery--next" onclick="gallery.next()" hidden>
-                        <img alt="next" src="images/next.svg"/>
+                        <img alt="next" src="./images/next.svg"/>
                     </div>
                 </div>
             </div>
@@ -344,6 +361,8 @@
             </div>
         </div>
     </div>
+
+
     <footer class="footer">
         <div class="footer--wrapper">
             <div class="profile-footer--text">
