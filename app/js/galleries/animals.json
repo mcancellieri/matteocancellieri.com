@@ -1,0 +1,36 @@
+{
+  "title": "Animals",
+  "description": "Wildlife, not so wild life, creatures big and small",
+  "gallery": [
+    {
+      "caption": "Sleeping pod",
+      "location": "Acrylics",
+      "image": "sleepingpod"
+    },
+    {
+      "caption": "Mid morning snack",
+      "location": "Gouache and pencils on paper",
+      "image": "pelican"
+    },
+    {
+      "caption": "Robin Redbreast",
+      "location": "Markers and pencils on bristol paper",
+      "image": "robinredbreast"
+    },
+    {
+      "caption": "The most over-dramatic mating dance",
+      "location": "Gouache and acrylics collage on canvas",
+      "image": "overdrama"
+    },
+    {
+      "caption": "El paraiso",
+      "location": "Gouache",
+      "image": "elparaiso"
+    },
+    {
+      "caption": "Onsen Macaque",
+      "location": "Pencil and markers on paper.",
+      "image": "macaque"
+    }
+  ]
+}

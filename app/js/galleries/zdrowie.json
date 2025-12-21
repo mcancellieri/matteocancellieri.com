@@ -1,0 +1,46 @@
+{
+  "title": "Zdrowie",
+  "description": "Around Krakow, just before the COVID-19 lockdown started, March 2020",
+  "gallery": [
+    {
+      "caption": "Golden Windows",
+      "location": "Krakow, Poland",
+      "image": "goldenwindows"
+    },
+    {
+      "caption": "Horse",
+      "location": "Krakow, Poland",
+      "image": "horse"
+    },
+    {
+      "caption": "Ghetto Heroes Square",
+      "location": "Krakow, Poland",
+      "image": "ghettoheroessquare"
+    },
+    {
+      "caption": "Happy Again",
+      "location": "Krakow, Poland",
+      "image": "happyagain"
+    },
+    {
+      "caption": "Aushwitz",
+      "location": "Aushwitz, Poland",
+      "image": "aushwitz"
+    },
+    {
+      "caption": "Wieliczka",
+      "location": "Wieliczka Salt Mine, Poland",
+      "image": "saltmine"
+    },
+    {
+      "caption": "Night Reading",
+      "location": "Krakow, Poland",
+      "image": "nightreading"
+    },
+    {
+      "caption": "Zdrowie",
+      "location": "Krakow, Poland",
+      "image": "zdrowie"
+    }
+  ]
+}

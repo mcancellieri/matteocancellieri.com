@@ -1,0 +1,488 @@
+@import 'variables.scss';
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: inherit;
+}
+
+
+a:hover {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+#skiptocontent {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+.wrapper {
+  padding: 25px;
+  @media(min-width: $screen-xl) {
+    width: $screen-xl;
+    margin: auto;
+  }
+}
+
+.stripe {
+  width: 100%;
+  display: inline-block;
+  padding: 50px 0;
+}
+
+
+.header-bar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  line-height: 60px;
+  background-color: $header-color;
+  text-align: center;
+  color: #fff;
+  z-index:4;
+}
+
+.header-bar--wrapper {
+  @extend .wrapper;
+  padding: 10px 0 0;
+}
+
+.header-bar img {
+  height: 40px;
+}
+
+.header-bar--title {
+  position: relative;
+  top: -10px;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.slideUp {
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+  transition: transform .5s ease-out;
+}
+
+.disappear {
+  max-height: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: height .5s ease-out;
+}
+
+.appear {
+  max-height: 100%;
+  transition: max-height .5s ease-out;
+}
+
+.slideDown {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: transform .5s ease-out;
+}
+
+.profile-header {
+  background-color: $header-color;
+  color: white;
+  padding-top: 15px;
+  @extend .stripe;
+}
+
+.profile-header--wrapper {
+  //@extend .wrapper;
+}
+
+.profile-header--hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/assets/photoprojects/between/chalk.jpg");
+
+  /* Set a specific height */
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.profile-header--hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.profile-header--hero-text img {
+  width: 20vw;
+  height: 20vh;
+  min-width: 50px;
+}
+
+.profile-header--image {
+  text-align: center;
+}
+
+
+.profile-contact--icons {
+  display: inline-block;
+}
+
+.profile-contact--icon {
+  text-decoration: none;
+  margin-left: 5px;
+  width: 33vw;
+}
+
+.profile-contact--icon img {
+  height: 15vh;
+  width: 15vh;
+}
+
+
+.profile-bio {
+  @extend .stripe;
+  background-color: $header-color;
+}
+
+.profile-bio--wrapper {
+  @extend .wrapper;
+}
+
+.profile-bio--item {
+  display: block;
+  width: 100%;
+  align-items: center;
+  @media(min-width: $screen-xl) {
+    display: flex;
+  }
+}
+
+.profile-bio--item-img {
+  height: 15vh;
+  width: 15vw;
+  min-width: 200px;
+  order: 1;
+
+}
+
+.profile-bio--item-text {
+  color: white;
+  font-size: 1.5rem;
+  vertical-align: center;
+  order: 2;
+}
+
+.profile-maker {
+  @extend .stripe;
+  color: #ffffff;
+  background: $color4 url(../images/makerstrasp.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
+}
+
+.profile-artist {
+  @extend .stripe;
+  color: #ffffff;
+  background: $color5 url(../images/art.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
+}
+
+.profile-maker--text, .profile-artist--text{
+  width: 100vw;
+  display: inline-block;
+  @media(min-width: $screen-m) {
+    width: 50vw;
+  }
+}
+
+.profile-maker--image, .profile-artist--image {
+  max-width: 80vw;
+  @media(min-width: $screen-m) {
+    float: right;
+    max-width: 30vw;
+  }
+}
+
+.profile-artist--image {
+  display:none;
+  max-width: 50vw;
+  @media(min-width: $screen-m) {
+    float: right;
+    max-width: 20vw;
+  }
+}
+
+.profile-artist--highlight {
+  background-color: #942826;
+  padding: 15px 15px 15px 30px;
+  display:inline-block;
+  width: 80%;
+  margin:50px;
+}
+
+.profile-artist--highlight p {
+  float:left;
+  width: 70%;
+}
+
+.profile-artist--highlight-image{
+  float:right;
+  max-width: 25vw;
+  margin-right:30px;
+}
+
+.profile-maker--wrapper, .profile-artist--wrapper {
+  @extend .wrapper;
+
+}
+
+.profile-projects {
+  @extend .stripe;
+  color: #ffffff;
+  background: $color3 url(../images/codetrasp.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
+}
+
+.profile-projects--wrapper {
+  @extend .wrapper;
+}
+
+.profile-project {
+  display: inline-block;
+}
+
+.profile-project--img {
+  margin-bottom: 15px;
+  @media(min-width: $screen-m) {
+    float: left;
+    margin-right: 15px;
+  }
+}
+
+.profile-project--past .profile-project--img {
+  margin-right: 10px;
+  margin-top: 30px;
+  float: none;
+}
+
+.profile-project--imgstrip {
+  text-align: center;
+}
+
+.profile-header--title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.profile-header--site-name {
+  position: relative;
+  top: 0;
+}
+
+.profile-skills {
+  background-color: #e0e0e0;
+  overflow: hidden;
+  @extend .stripe;
+}
+
+.skills {
+  padding: 0;
+  @extend .wrapper;
+}
+
+.skills svg {
+  font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.footer {
+  background-color: $footer-color;
+  color: white;
+  min-height: 300px;
+  @extend .stripe;
+
+}
+
+.footer--wrapper {
+  @extend .wrapper;
+}
+
+.profile-footer--image {
+  float: right;
+}
+
+.profile-footer--text {
+  display: inline-block;
+}
+
+.profile-footer--image img {
+  width: 200px;
+}
+
+.profile-photoprojects {
+  @extend .stripe;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 0 0;
+  background: $color2 url(../images/cameratrasp.svg) 75vw 0 no-repeat;
+  background-size: 40vw 40vw;
+}
+
+.profile-photoprojects--wrapper {
+  @extend .wrapper;
+  padding-top: 50px;
+}
+
+.profile-photoproject {
+  overflow: hidden;
+  float: left;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.profile-photoproject img {
+  width: 80%;
+  height: 80%;
+  @media(min-width: $screen-l) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.profile-gallery {
+  @extend .stripe;
+  padding: 0 0;
+}
+
+.profile-gallery--wrapper {
+  @extend .wrapper;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  padding: 0;
+  position:relative;
+  width:100%;
+  height: 100%;
+}
+
+.profile-artist-galleries {
+  width: 100%;
+  display:inline-block;
+  margin-top:30px;
+}
+
+.profile-gallery--close {
+  position: fixed;
+  top: 6vh;
+  float:left;
+  opacity: 1;
+  z-index: 3;
+}
+.profile-gallery--close:hover{
+  opacity: 1;
+}
+
+.profile-gallery--next {
+  //height: 100%;
+  font-size: 2rem;
+  order: 3;
+  margin-right: -25px;
+}
+
+.profile-gallery--prev {
+  //height: 100%;
+
+  order: 1;
+  margin-left: -25px;
+}
+
+.profile-gallery--prev img, .profile-gallery--next img, .profile-gallery--close img {
+  //height: 100%;
+  height: 10vh;
+}
+
+.profile-gallery--images {
+  display: inline-block;
+  order: 2;
+  width: 100%;
+}
+
+.profile-gallery--image img {
+  max-width: 70vw;
+  max-height: 70vh;
+
+}
+
+.profile-gallery--meta {
+  margin-bottom: 25px;
+  max-height: 10%;
+}
+
+.profile-gallery--meta--caption {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-gallery--meta--location {
+  font-style: italic;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 50%;
+  display: none;
+  height: 100%; /* Full height (cover the whole page) */
+  background-color: transparent;
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#profile-gallery--overlayprev {
+  @extend .overlay;
+  top: 0;
+  left: 0;
+}
+
+#profile-gallery--overlaynext {
+  @extend .overlay;
+  top: 0;
+  right: 0;
+}
+
+.scaryones--main {
+  padding:50px;
+}
