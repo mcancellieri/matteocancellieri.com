@@ -5,6 +5,7 @@
   "assetsPath": "app/images/assets",
   "scripts": {
     "build": "parcel build app/index.html",
+    "prod": "parcel build app/index.html --public-url https://matteocancellieri.com && parcel build app/scaryones/index.html --dist-dir dist/scaryones --public-url https://matteocancellieri.com/scaryones/\n",
     "test": "echo \"Error: no test specified\" && exit 1",
     "run": "parcel app/index.html "
   },
@@ -18,28 +19,33 @@
     "url": "https://github.com/mcancellieri/matteocancellieri.com/issues"
   },
   "homepage": "https://github.com/mcancellieri/matteocancellieri.com#readme",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ],
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@parcel/packager-raw-url": "2.12.0",
+    "@parcel/packager-raw-url": "^2.16.3",
     "@parcel/resolver-glob": "^2.12.0",
-    "@parcel/transformer-jsonld": "2.12.0",
-    "@parcel/transformer-sass": "2.12.0",
+    "@parcel/transformer-jsonld": "^2.16.3",
+    "@parcel/transformer-sass": "^2.16.3",
     "cssnano": "^6.0.1",
     "glightbox": "^2.0.5",
-    "parcel": "^2.8.3",
-    "parcel-reporter-static-files-copy": "^1.5.0",
+    "parcel": "^2.16.3",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "simple-lightbox": "^2.1.0"
   },
   "dependencies": {
-    "css-loader": "^3.5.2",
+    "css-loader": "^6.11.0",
     "file-loader": "^6.0.0",
     "parcel-plugin-asset-copier": "^1.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "sim": "^0.1.23",
     "style-loader": "^1.1.4",
-    "webpack": "^4.43.0",
-    "webpack-dev-server": "^4.15.0"
+    "webpack": "^5.104.1",
+    "webpack-dev-server": "^5.2.2"
   },
   "@parcel/resolver-default": {
     "packageExports": true
