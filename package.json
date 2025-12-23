@@ -4,10 +4,10 @@
   "description": "matteocancellieri.com personal website",
   "assetsPath": "app/images/assets",
   "scripts": {
-    "build": "parcel build app/index.html",
-    "prod": "parcel build app/index.html --public-url https://matteocancellieri.com && parcel build app/scaryones/index.html --dist-dir dist/scaryones --public-url https://matteocancellieri.com/scaryones/\n",
+    "build": "parcel build app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "parcel app/index.html "
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "run": "parcel app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html "
   },
   "staticFiles": {
     "staticPath": "app/images/assets"
@@ -34,7 +34,8 @@
     "glightbox": "^2.0.5",
     "parcel": "^2.16.3",
     "parcel-reporter-static-files-copy": "^1.5.3",
-    "simple-lightbox": "^2.1.0"
+    "simple-lightbox": "^2.1.0",
+    "wrangler": "^4.56.0"
   },
   "dependencies": {
     "css-loader": "^6.11.0",

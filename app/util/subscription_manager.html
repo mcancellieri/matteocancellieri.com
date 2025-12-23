@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscription Manager (Membership Extract)</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 24px; line-height: 1.5; }
+    main { max-width: 1000px; margin: 0 auto; display: grid; gap: 16px; }
+    textarea, input[type="text"] { width: 100%; box-sizing: border-box; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 10px; border-radius: 6px; border: 1px solid #bbb; }
+    textarea { min-height: 200px; }
+    button { padding: 10px 14px; border-radius: 6px; border: 1px solid #222; background: #222; color: #fff; cursor: pointer; }
+    button:hover { opacity: 0.9; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+    th { background: rgba(0,0,0,0.05); }
+    .error { color: #c00; font-weight: 600; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    @media (max-width: 640px) { .row { flex-direction: column; align-items: flex-start; } button { width: 100%; } }
+  </style>
+</head>
+<body>
+<main>
+  <nav>
+    <a href="index.html">CSV Randomiser</a> |
+    <a href="download_competition.html">Competition Downloader</a> |
+    <a href="subscription_manager.html">Subscription Manager</a>
+  </nav>
+
+  <header>
+    <h1>Subscription Manager</h1>
+    <p>Paste the subscription export (TSV/CSV). Rows containing “Membership” in the type column are kept and transformed into the output fields defined in <code>subscription_manager.py</code>.</p>
+  </header>
+
+  <section>
+    <label for="raw-input">Spreadsheet paste</label>
+    <textarea id="raw-input" placeholder="Paste rows here..."></textarea>
+  </section>
+
+  <section class="row">
+    <button id="process">Process memberships</button>
+    <div id="status"></div>
+  </section>
+
+  <section>
+    <div id="error" class="error" role="status" aria-live="polite"></div>
+    <div id="table-wrapper"></div>
+    <label for="csv-output">CSV output (copy as needed)</label>
+    <textarea id="csv-output" readonly></textarea>
+  </section>
+</main>
+
+<script>
+  const input = document.getElementById("raw-input");
+  const statusEl = document.getElementById("status");
+  const errorEl = document.getElementById("error");
+  const tableWrapper = document.getElementById("table-wrapper");
+  const csvOutput = document.getElementById("csv-output");
+
+  let lastResults = [];
+
+  const parseLine = (line, delimiter) => {
+    if (delimiter === "\t") return line.split("\t");
+    const cells = [];
+    let current = "";
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i += 1) {
+      const char = line[i];
+      if (char === '"') {
+        if (inQuotes && line[i + 1] === '"') { current += '"'; i += 1; continue; }
+        inQuotes = !inQuotes;
+        continue;
+      }
+      if (char === delimiter && !inQuotes) { cells.push(current); current = ""; continue; }
+      current += char;
+    }
+    cells.push(current);
+    return cells;
+  };
+
+  const processInput = (text) => {
+    const delimiter = text.includes("\t") ? "\t" : ",";
+    const rows = text
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .map((line) => parseLine(line, delimiter));
+
+    const errors = [];
+    const results = [];
+
+    rows.forEach((row, idx) => {
+      if (row.length < 26) {
+        errors.push(`Row ${idx + 1} has only ${row.length} column(s); need at least 26.`);
+        return;
+      }
+      const typeField = row[25] || "";
+      if (!typeField.includes("Membership")) return;
+
+      const nameRaw = row[15] || "";
+      const nameParts = nameRaw.trim().split(/\s+/).filter(Boolean);
+      const firstName = nameParts[0] || "";
+      const lastName = nameParts.slice(1).join(" ");
+      const type = row[3] === "45.0" ? "household" : "regular";
+
+      results.push({
+        date: row[2] || "",
+        "last name": lastName,
+        "first name": firstName,
+        type,
+        address: row[18] || "",
+        town: row[19] || "",
+        postcode: row[20] || "",
+        phone: row[17] || "",
+        phone2: "-",
+        email: (row[16] || "").toLowerCase(),
+      });
+    });
+
+    if (!results.length && !errors.length) {
+      errors.push("No membership rows found.");
+    }
+
+    return { results, errors };
+  };
+
+  const renderTable = (data) => {
+    if (!data.length) { tableWrapper.innerHTML = ""; return; }
+    const headers = Object.keys(data[0]);
+    const thead = `<thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>`;
+    const tbody = `<tbody>${data.map(row => `<tr>${headers.map(h => `<td>${(row[h] ?? "").toString()}</td>`).join("")}</tr>`).join("")}</tbody>`;
+    tableWrapper.innerHTML = `<table>${thead}${tbody}</table>`;
+  };
+
+  const toCsv = (data) => {
+    if (!data.length) return "";
+    const headers = Object.keys(data[0]);
+    const escape = (val) => {
+      const s = (val ?? "").toString();
+      return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+    };
+    const rows = [headers.join(",")].concat(
+      data.map(row => headers.map(h => escape(row[h])).join(","))
+    );
+    return rows.join("\n");
+  };
+
+  document.getElementById("process").addEventListener("click", () => {
+    errorEl.textContent = "";
+    statusEl.textContent = "";
+    tableWrapper.innerHTML = "";
+    csvOutput.value = "";
+    lastResults = [];
+
+    const raw = input.value.trim();
+    if (!raw) {
+      errorEl.textContent = "Please paste some rows first.";
+      return;
+    }
+
+    const { results, errors } = processInput(raw);
+    if (errors.length) errorEl.textContent = errors.join(" ");
+    if (!results.length) return;
+
+    lastResults = results;
+    renderTable(results);
+    statusEl.textContent = `Processed ${results.length} membership row(s).`;
+    csvOutput.value = toCsv(results);
+  });
+</script>
+</body>
+</html>
+

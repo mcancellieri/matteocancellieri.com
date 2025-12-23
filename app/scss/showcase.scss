@@ -1,0 +1,96 @@
+@use 'variables.scss' as *;
+
+$bg-color: $color3;
+$text-color: #eee;
+$ease-custom: cubic-bezier(0.23, 1, 0.32, 1);
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 80px 40px;
+  padding: 100px 5%;
+
+  .gallery-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s $ease-custom, transform 1.2s $ease-custom;
+
+    display: flex;
+    flex-direction: column; // Keeps meta below the image
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .image-container {
+      width: 100%;
+      /* 1. Pick a consistent ratio for the "frame" (e.g., 1/1 square or 4/5 portrait) */
+      aspect-ratio: 1 / 1;
+
+      /* 2. Center the image inside this frame */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $bg-color; // Light grey "gallery wall" feel
+      overflow: hidden;
+
+      img {
+        /* 3. Scale the image to fit the frame without cropping */
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+
+        filter: grayscale(75%);
+        transition: filter 0.8s ease, transform 1s $ease-custom;
+
+        &:hover {
+          filter: grayscale(0%);
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .meta {
+      height: 40px; // 4. Fix the height of the text area so it doesn't push the grid
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $text-color;
+      /* Ensures text stays on one/two lines and doesn't break the grid */
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+/* Mobile Refinements */
+@media (max-width: $screen-l) {
+  .gallery-grid {
+    gap: 40px; /* Smaller gaps so you don't scroll forever through white space */
+    padding: 60px 20px;
+
+    .gallery-item {
+      transform: translateY(20px); /* Shorter drift distance for smaller screens */
+
+      img {
+        filter: grayscale(0%); /* Always show color on mobile */
+
+        &:hover {
+          transform: none; /* Disable zoom-on-hover to prevent "sticky" taps */
+        }
+      }
+    }
+  }
+}
