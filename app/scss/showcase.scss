@@ -4,7 +4,7 @@ $bg-color: $color3;
 $text-color: #eee;
 $ease-custom: cubic-bezier(0.23, 1, 0.32, 1);
 
-body {
+.showcase-body {
   background-color: $bg-color;
   color: $text-color;
   font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;

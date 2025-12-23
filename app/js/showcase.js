@@ -2,12 +2,23 @@
 import '../scss/showcase.scss';
 import '../scss/main.scss';
 import artworks from '../js/artworks.json';
+import artworksHome from '../js/artworksHome.json';
 
 const gallery = document.querySelector('.gallery-grid');
-
+const homeGallery = document.querySelector('.gallery-grid-home');
 // This function takes your JSON object and turns it into HTML
 const renderGallery = (data) => {
-    const htmlTemplate = data.map(item => `   
+    let target;
+    if (homeGallery){
+        target=homeGallery;
+        const randomNine = arr => [...arr].sort(() => 0.5 - Math.random()).slice(0, 9);
+        data=randomNine(artworksHome);
+    }
+    else {
+        target=gallery;
+        data=artworks;
+    }
+    target.innerHTML = data.map(item => `   
     <div class="gallery-item">
         <div class="image-container">
                 <picture>
@@ -20,8 +31,6 @@ const renderGallery = (data) => {
         <div class="meta">${item.title} - ${item.medium} - ${item.year} </div>
     </div>
   `).join('');
-
-    gallery.innerHTML = htmlTemplate;
 };
 
 // Execute the render
