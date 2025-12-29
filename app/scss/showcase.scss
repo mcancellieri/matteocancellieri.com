@@ -8,8 +8,8 @@ $ease-custom: cubic-bezier(0.23, 1, 0.32, 1);
   background-color: $bg-color;
   color: $text-color;
   font-family: 'Montserrat', Helvetica Neue, Helvetica, sans-serif;
-  padding-top:100px;
-  padding-left:50px
+  padding-top: 100px;
+  padding-left: 50px
 }
 
 .gallery-grid {
@@ -77,20 +77,23 @@ $ease-custom: cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
 
-/* Mobile Refinements */
-@media (max-width: $screen-l) {
+@media (max-width: 700px) {
+  .showcase-body  {
+    padding-left: 5px;
+  }
+
   .gallery-grid {
-    gap: 40px; /* Smaller gaps so you don't scroll forever through white space */
-    padding: 60px 20px;
+    gap: 40px;
+    padding: 30px 5px;
 
     .gallery-item {
-      transform: translateY(20px); /* Shorter drift distance for smaller screens */
+      transform: translateY(20px);
 
-      img {
-        filter: grayscale(0%); /* Always show color on mobile */
+      .image-container img {
+        filter: grayscale(0%);
 
         &:hover {
-          transform: none; /* Disable zoom-on-hover to prevent "sticky" taps */
+          transform: none;
         }
       }
     }
