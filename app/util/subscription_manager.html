@@ -64,7 +64,7 @@
     if (delimiter === "\t") return line.split("\t");
     const cells = [];
     let current = "";
-    let inQuotes = false;
+    let inQuotes = true;
     for (let i = 0; i < line.length; i += 1) {
       const char = line[i];
       if (char === '"') {
@@ -81,11 +81,9 @@
 
   const processInput = (text) => {
     const delimiter = text.includes("\t") ? "\t" : ",";
-    const rows = text
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter(Boolean)
-      .map((line) => parseLine(line, delimiter));
+
+    // Parse CSV with proper quote handling
+    const rows = parseCSV(text, delimiter);
 
     const errors = [];
     const results = [];
@@ -102,8 +100,8 @@
       const nameParts = nameRaw.trim().split(/\s+/).filter(Boolean);
       const firstName = nameParts[0] || "";
       const lastName = nameParts.slice(1).join(" ");
-      const type = row[3] === "45.0" ? "household" : "regular";
-
+      const type = row[4] === "45.0" ? "household" : "regular";
+      console.log(row)
       results.push({
         date: row[2] || "",
         "last name": lastName,
@@ -123,6 +121,60 @@
     }
 
     return { results, errors };
+  };
+
+  // New CSV parser that handles quoted fields with newlines
+  const parseCSV = (text, delimiter) => {
+    const rows = [];
+    let currentRow = [];
+    let currentField = "";
+    let insideQuotes = false;
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const nextChar = text[i + 1];
+
+      if (char === '"') {
+        if (insideQuotes && nextChar === '"') {
+          // Escaped quote (two consecutive quotes)
+          currentField += '"';
+          i++; // Skip next quote
+        } else {
+          // Toggle quote state
+          insideQuotes = !insideQuotes;
+        }
+      } else if (char === delimiter && !insideQuotes) {
+        // End of field
+        currentRow.push(currentField.trim());
+        currentField = "";
+      } else if ((char === '\n' || char === '\r') && !insideQuotes) {
+        // End of row
+        if (char === '\r' && nextChar === '\n') {
+          i++; // Skip \n in \r\n
+        }
+        if (currentField || currentRow.length > 0) {
+          currentRow.push(currentField.trim());
+          if (currentRow.some(field => field !== "")) {
+            rows.push(currentRow);
+          }
+          currentRow = [];
+          currentField = "";
+        }
+      } else {
+        // Regular character
+        currentField += char;
+      }
+    }
+
+    // Handle last field and row
+    if (currentField || currentRow.length > 0) {
+      currentRow.push(currentField.trim());
+      if (currentRow.some(field => field !== "")) {
+        rows.push(currentRow);
+      }
+    }
+
+    return rows;
   };
 
   const renderTable = (data) => {
