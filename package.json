@@ -4,10 +4,10 @@
   "description": "matteocancellieri.com personal website",
   "assetsPath": "app/images/assets",
   "scripts": {
-    "build": "parcel build app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html",
+    "build": "parcel build app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html app/lbas/*.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run build && wrangler pages deploy dist",
-    "run": "parcel app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html "
+    "run": "parcel app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html app/jam26/index.html "
   },
   "staticFiles": {
     "staticPath": "app/images/assets"
@@ -38,6 +38,7 @@
     "wrangler": "^4.56.0"
   },
   "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.32",
     "css-loader": "^6.11.0",
     "file-loader": "^6.0.0",
     "parcel-plugin-asset-copier": "^1.0.0",
