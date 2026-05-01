@@ -4,7 +4,7 @@
   "description": "matteocancellieri.com personal website",
   "assetsPath": "app/images/assets",
   "scripts": {
-    "build": "parcel build app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html app/lbas/*.html",
+    "build": "parcel build app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html app/lbas/*.html app/jam26/index.html ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run build && wrangler pages deploy dist",
     "run": "parcel app/index.html app/scaryones/index.html app/util/*.html app/showcase/index.html app/jam26/index.html "

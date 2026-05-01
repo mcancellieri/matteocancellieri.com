@@ -51,7 +51,7 @@ $ease-custom: cubic-bezier(0.23, 1, 0.32, 1);
         height: auto;
         object-fit: contain;
 
-        filter: grayscale(75%);
+        filter: grayscale(40%);
         transition: filter 0.8s ease, transform 1s $ease-custom;
 
         &:hover {
